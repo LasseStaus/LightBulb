@@ -19,7 +19,7 @@ async function loadJson() {
   //makeObjects();
 }
 async function loadPics() {
-  let response = await fetch("static/imgs/timelineTwo.svg");
+  let response = await fetch("imgs/timelineTwo.svg");
   let timeline = await response.text();
   document.querySelector(".timelineTwo").innerHTML = timeline;
   //countJSON();
