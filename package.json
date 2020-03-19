@@ -1,0 +1,27 @@
+{
+  "name": "lightbulb",
+  "version": "0.0.1",
+  "description": "Lightbulb assignment",
+  "main": "main.js",
+  "scripts": {
+    "start": "parcel *.html --open",
+    "build": "parcel build *.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigMoneyBigCars/LightBulb.git"
+  },
+  "author": "Lasse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BigMoneyBigCars/LightBulb/issues"
+  },
+  "homepage": "https://github.com/BigMoneyBigCars/LightBulb#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.3"
+  },
+  "dependencies": {
+    "parcel-plugin-static-files-copy": "^2.3.1"
+  }
+}
