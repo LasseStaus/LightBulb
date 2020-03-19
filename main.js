@@ -1,7 +1,9 @@
-import { gallery as pictures, settings } from "./modules/gallery";
+import "@babel/polyfill";
+import { screenTwo } from "./modules/screenTwo";
 
-document.querySelector("h1").textContent = settings.author;
+window.addEventListener("DOMContentLoaded", start);
 
-const data = [{ i: "1.png" }, { i: "2.png" }];
-
-pictures(data, document.body);
+function start() {
+  console.log("start");
+  screenTwo();
+}

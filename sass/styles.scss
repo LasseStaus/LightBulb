@@ -1,6 +1,7 @@
 @use 'partials/vars';
 @use 'partials/header';
 @use 'partials/mixins';
+@use 'partials/screenTwo';
 
 body {
   background: vars.$bg-color;
