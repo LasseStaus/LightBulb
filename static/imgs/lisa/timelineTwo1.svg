@@ -10,7 +10,7 @@
 	.st4{fill:#FFFFFF;stroke:#C000FF;stroke-width:5;stroke-miterlimit:10;}
 	.st5{fill:#FFFFFF;stroke:#F73131;stroke-width:5;stroke-miterlimit:10;}
 	.st6{fill:#FFFFFF;stroke:#0062FF;stroke-width:5;stroke-miterlimit:10;}
-	.st7{fill:#FFFFFF;stroke:url(#SVGID_1_);stroke-width:5;stroke-miterlimit:10;}
+	.st7{fill:#FFFFFF;stroke:url(#cirkel2_1_);stroke-width:5;stroke-miterlimit:10;}
 	.st8{fill:#FFFFFF;stroke:#00FFCE;stroke-width:5;stroke-miterlimit:10;}
 </style>
 <path class="st0" d="M1011,459.9c0.2,0.9,0.4,1.7,0.6,2.6c5.5,26.5,8.5,53.9,8.5,82c0,79.4-23.3,153.3-63.4,215.4"/>
@@ -20,14 +20,14 @@
 <path class="st0" d="M300.4,777.5C253,712,225,631.5,225,544.5c0-27.4,2.8-54.2,8.1-80.1c0.2-1.1,0.4-2.2,0.7-3.2"/>
 <path class="st1" d="M945,777"/>
 <path class="st2" d="M240.5,654.5"/>
-<circle class="st3" cx="454" cy="184" r="21.5"/>
-<circle class="st4" cx="945" cy="778" r="21.5"/>
-<circle class="st5" cx="300" cy="778" r="21.5"/>
-<circle class="st6" cx="1005" cy="441" r="21.5"/>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="215" y1="442" x2="263" y2="442">
+<circle id="cirkel1" class="st5 cirkel1" data-num="1" cx="300" cy="778" r="21.5"/>
+<circle id="cirkel2" class="st7 cirkel2" data-num="2" cx="239" cy="442" r="21.5"/>
+<circle id="cirkel3" class="st3 cirkel3" data-num="3" cx="454" cy="184" r="21.5"/>
+<circle id="cirkel4" class="st8 cirkel4" data-num="4" cx="796" cy="184" r="21.5"/>
+<circle id="cirkel5" class="st6 cirkel5" data-num="5" cx="1005" cy="441" r="21.5"/>
+<circle id="cirkel6" class="st4 cirkel6" data-num="6" cx="945" cy="778" r="21.5"/>
+<linearGradient id="cirkel2_1_" gradientUnits="userSpaceOnUse" x1="215" y1="442" x2="263" y2="442">
 	<stop  offset="4.587239e-03" style="stop-color:#FF5500"/>
 	<stop  offset="1" style="stop-color:#FC5603"/>
 </linearGradient>
-<circle class="st7" cx="239" cy="442" r="21.5"/>
-<circle class="st8" cx="796" cy="184" r="21.5"/>
 </svg>

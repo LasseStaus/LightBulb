@@ -1,0 +1,88 @@
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 819 670" style="enable-background:new 0 0 819 670;" xml:space="preserve" width="819" height="670">
+      <style type="text/css">
+        .st0,
+        .st7,
+        .st8,
+        .st9,
+        .st10,
+        .st11 {
+          fill: none;
+          stroke: #c2c2c2;
+          stroke-width: 5;
+          stroke-miterlimit: 10;
+        }
+        .st1 {
+          fill: none;
+          stroke: #f73131;
+          stroke-width: 5;
+          stroke-miterlimit: 10;
+        }
+        .st2 {
+          fill: none;
+          stroke: #ff5500;
+          stroke-width: 5;
+          stroke-miterlimit: 10;
+        }
+        .st3 {
+          fill: none;
+          stroke: #0dff00;
+          stroke-width: 5;
+          stroke-miterlimit: 10;
+        }
+        .st4 {
+          fill: none;
+          stroke: #00ffce;
+          stroke-width: 5;
+          stroke-miterlimit: 10;
+        }
+        .st5 {
+          fill: none;
+          stroke: #0062ff;
+          stroke-width: 5;
+          stroke-miterlimit: 10;
+        }
+        .st6 {
+          fill: none;
+          stroke: #c000ff;
+          stroke-width: 5;
+          stroke-miterlimit: 10;
+        }
+        .st7 {
+          stroke: #ff5500;
+        }
+        .st8 {
+          stroke: #0dff00;
+        }
+        .st9 {
+          stroke: #00ffce;
+        }
+        .st10 {
+          stroke: #0062ff;
+        }
+        .st11 {
+          stroke: #c000ff;
+        }
+      </style>
+      <g id="grey_lines">
+        <path class="st0 svg-elem-1" d="M75.9,624.2C36.1,562.3,13,488.6,13,409.5c0-28.1,2.9-55.5,8.5-82c0.1-0.7,0.3-1.4,0.4-2.1"></path>
+        <path class="st0 svg-elem-2" d="M33.1,284.5c32.1-96.9,100.4-177.3,189-225.1"></path>
+        <path class="st0 svg-elem-3" d="M260.8,41.2c0.9-0.4,1.8-0.7,2.7-1.1C309,22,358.6,12,410.5,12C464,12,515,22.6,561.6,41.7"></path>
+        <path class="st0 svg-elem-4" d="M600,60c0.8,0.5,1.7,0.9,2.5,1.4c86.2,47.7,152.9,126.4,184.8,221.2"></path>
+        <path class="st0 svg-elem-5" d="M798.8,324.1c0.2,0.8,0.4,1.6,0.5,2.4c5.7,26.8,8.7,54.5,8.7,83c0,79.1-23.1,152.8-62.9,214.7"></path>
+      </g>
+      <g id="colored_lines">
+        <path class="st7 svg-elem-6" d="M75.9,624.2C36.1,562.3,13,488.6,13,409.5c0-28.1,2.9-55.5,8.5-82c0.1-0.7,0.3-1.4,0.4-2.1"></path>
+        <path class="st8 svg-elem-7" d="M33.1,284.5c32.1-96.9,100.4-177.3,189-225.1"></path>
+        <path class="st9 svg-elem-8" d="M260.8,41.2c0.9-0.4,1.8-0.7,2.7-1.1C309,22,358.6,12,410.5,12C464,12,515,22.6,561.6,41.7"></path>
+        <path class="st10 svg-elem-9" d="M600,60c0.8,0.5,1.7,0.9,2.5,1.4c86.2,47.7,152.9,126.4,184.8,221.2"></path>
+        <path class="st11 svg-elem-10" d="M798.8,324.1c0.2,0.8,0.4,1.6,0.5,2.4c5.7,26.8,8.7,54.5,8.7,83c0,79.1-23.1,152.8-62.9,214.7"></path>
+      </g>
+      <g id="circles">
+        <circle id="cirkel1" class="st1 cirkel1 svg-elem-11" data-num="1" cx="88" cy="642" r="21.5"></circle>
+        <circle id="cirkel2" class="st2 cirkel2 svg-elem-12" data-num="2" cx="27" cy="306" r="21.5"></circle>
+        <circle id="cirkel3" class="st3 cirkel3 svg-elem-13" data-num="3" cx="242" cy="48" r="21.5"></circle>
+        <circle id="cirkel4" class="st4 cirkel4 svg-elem-14" data-num="4" cx="584" cy="48" r="21.5"></circle>
+        <circle id="cirkel5" class="st5 cirkel5 svg-elem-15" data-num="5" cx="793" cy="305" r="21.5"></circle>
+        <circle id="cirkel6" class="st6 cirkel6 svg-elem-16" data-num="6" cx="733" cy="642" r="21.5"></circle>
+      </g>
+    </svg>

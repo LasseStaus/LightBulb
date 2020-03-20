@@ -2,18 +2,4 @@
 @use 'partials/header';
 @use 'partials/mixins';
 @use 'partials/screenTwo';
-
-body {
-  background: vars.$bg-color;
-  h1 {
-    color: hotpink;
-    @include mixins.flexible();
-    &:hover {
-      color: blue;
-    }
-  }
-}
-
-img {
-  @include mixins.defaultBorder(5px);
-}
+@use 'partials/icon_animation_lisa';
