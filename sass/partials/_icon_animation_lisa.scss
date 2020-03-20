@@ -1,5 +1,5 @@
 .flipInX {
-  animation: flipInX 2s 1 forwards;
+  animation: flipInX 1s 1 forwards;
 }
 
 @keyframes flipInX {
@@ -28,8 +28,29 @@
   }
 }
 
+.flipOutX {
+  animation: flipOutX 0.5s 1 forwards;
+  backface-visibility: visible !important;
+}
+
+@keyframes flipOutX {
+  from {
+    transform: perspective(400px);
+  }
+
+  30% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+
 .bounceIn {
-  animation: bounceIn 0.75s 1 forwards;
+  animation: bounceIn 1s 1 forwards;
 }
 
 @keyframes bounceIn {
@@ -71,7 +92,7 @@
 }
 
 .bounceOut {
-  animation: bounceOut 0.75s 1 forwards;
+  animation: bounceOut 0.4s 1 forwards;
 }
 
 @keyframes bounceOut {

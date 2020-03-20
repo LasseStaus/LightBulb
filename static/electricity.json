@@ -4,41 +4,47 @@
     "icon": "1.png",
     "number": "1",
     "color": "#F73131",
-    "content": "1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa pariatur accusamus amet expedita! At quas reprehenderit natus porro aliquam, earum vitae delectus corporis blanditiis in dicta ipsa quod eveniet molestiae?"
+    "lineColor": "none",
+    "content": "1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1 Dette er tekst 1"
   },
   {
     "header": "Radio",
     "icon": "2.png",
     "number": "2",
     "color": "#ff4e00",
-    "content": "2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa pariatur accusamus amet expedita! At quas reprehenderit natus porro aliquam, earum vitae delectus corporis blanditiis in dicta ipsa quod eveniet molestiae?"
+    "lineColor": "red",
+    "content": "2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2 Dette er tekst 2"
   },
   {
     "header": "Appliances",
     "icon": "3.png",
     "number": 3,
     "color": "#0DFF00",
-    "content": "3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa pariatur accusamus amet expedita! At quas reprehenderit natus porro aliquam, earum vitae delectus corporis blanditiis in dicta ipsa quod eveniet molestiae?"
+    "lineColor": "orange",
+    "content": "3  Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3 Dette er tekst 3"
   },
   {
     "header": "Productivity",
     "icon": "4.png",
     "number": "4",
     "color": "#00FFCE",
-    "content": "4 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa pariatur accusamus amet expedita! At quas reprehenderit natus porro aliquam, earum vitae delectus corporis blanditiis in dicta ipsa quod eveniet molestiae?"
+    "lineColor": "green",
+    "content": "4  Dette er tekst 4 Dette er tekst 4 Dette er tekst 4 Dette er tekst 4 Dette er tekst 4 Dette er tekst 4 Dette er tekst 4 Dette er tekst 4 Dette er tekst 4 Dette er tekst 4 Dette er tekst 4 Dette er tekst 4 Dette er tekst 4?"
   },
   {
     "header": "Transportation",
     "icon": "5.png",
     "number": "5",
     "color": "#0062FF",
-    "content": "5 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa pariatur accusamus amet expedita! At quas reprehenderit natus porro aliquam, earum vitae delectus corporis blanditiis in dicta ipsa quod eveniet molestiae?"
+    "lineColor": "turkoise",
+    "content": "5 Dette er tekst 5"
   },
   {
     "header": "Globalization",
     "icon": "6.png",
     "number": "6",
     "color": "#C000FF",
+    "lineColor": "blue",
     "content": "6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa pariatur accusamus amet expedita! At quas reprehenderit natus porro aliquam, earum vitae delectus corporis blanditiis in dicta ipsa quod eveniet molestiae?"
   }
 ]
