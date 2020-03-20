@@ -21,23 +21,3 @@ body {
 img {
   @include mixins.defaultBorder(5px);
 }
-
-#lasse {
-  margin: 0 auto;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.l-container {
-  width: 100%;
-}
-
-svg {
-  height: 70%;
-  display: block;
-  margin: 0 auto;
-  width: 30%;
-}
