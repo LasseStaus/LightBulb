@@ -10,7 +10,7 @@ import "@babel/polyfill";
 
 import { getSVG } from "./modules/lasse";
 
-const data = "imgs/lasse/asset.svg";
+const data = "imgs/lasse/mySVG.svg";
 
 getSVG(data, document.querySelector(".l-container"));
 
