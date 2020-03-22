@@ -8,11 +8,14 @@ pictures(data, document.body); */
 
 import "@babel/polyfill";
 
-import { getSVG } from "./modules/lasse";
+import { getSVG, gallery } from "./modules/lasse";
 
-const data = "imgs/lasse/mySVG.svg";
+const data = "imgs/lasse/newtestsvg.svg";
 
 getSVG(data, document.querySelector(".l-container"));
+
+/* const gdata = [{ i: "desktop.svg" }];
+gallery(gdata, document.querySelector(".img")); */
 
 /* window.addEventListener("DOMContentLoaded", getSVG);
 async function getSVG() {

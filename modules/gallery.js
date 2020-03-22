@@ -9,6 +9,8 @@ export function gallery(data, parent) {
 function createElement(type) {
   return document.createElement(type);
 }
+
+test(a1);
 export const settings = {
   meaning: 42,
   author: "peter panik"
