@@ -1,7 +1,52 @@
-import { gallery as pictures, settings } from "./modules/gallery";
+import "@babel/polyfill";
 
-document.querySelector("h1").textContent = settings.author;
+//LOAD
 
-const data = [{ i: "1.png" }, { i: "2.png" }];
+window.addEventListener("DOMContentLoaded", start);
 
-pictures(data, document.body);
+//Consts & lets global variables
+const globe = document.querySelector("#peter > div.scene");
+const myButton = document.querySelector(".explore");
+const text = document.querySelector(".textbox");
+//adds fade-in animation to a href .explore
+//adds eventlistener to .explore and calls function flipOut
+function start() {
+  globe.classList.add("hide");
+  text.classList.add("hide");
+  document.querySelector(".explore").classList.add("fade-in");
+  document.querySelector(".explore").addEventListener("click", flipOut);
+}
+
+//flipOut
+//removes fade-in animation
+//adds flipoutx animation from animate.css
+
+function flipOut() {
+  myButton.classList.remove("fade-in");
+  myButton.classList.add("animated", "flipOutX");
+  // delay function fetchSvg
+  setTimeout(globeRotate, 1200);
+}
+
+//async function fetchSvg
+//fetches globe svg
+//TO-DO: Globe has to "draw" itself instead of fading in
+
+/* async function fetchSvg() {
+  let response = await fetch("imgs/peter/klode.svg");
+  let mySvgData = await response.text();
+  document.querySelector(".container").innerHTML = mySvgData;
+  const GlobeSvg = document.querySelector("g");
+  GlobeSvg.classList.add("animated", "fadeIn");
+} */
+
+function globeRotate() {
+  globe.classList.remove("hide");
+  globe.classList.add("animated", "fadeInDown");
+  setTimeout(textAppear, 1000);
+}
+
+function textAppear() {
+  text.classList.remove("hide");
+  text.classList.add("fade-in");
+}
