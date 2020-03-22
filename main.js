@@ -14,6 +14,7 @@ const arrow = document.querySelector(".arrow");
 function start() {
   globe.classList.add("hide");
   text.classList.add("hide");
+  document.querySelector("h1").classList.add("fade-in");
   document.querySelector(".explore").classList.add("fade-in");
   document.querySelector(".explore").addEventListener("click", flipOut);
 }
@@ -24,6 +25,8 @@ function start() {
 
 function flipOut() {
   myButton.classList.remove("fade-in");
+  document.querySelector("h1").classList.add("hide");
+  document.querySelector(".categoryWrapper").classList.add("animated", "fadeOut");
   myButton.classList.add("animated", "flipOutX");
   // delay function fetchSvg
   setTimeout(globeRotate, 1200);
@@ -42,6 +45,7 @@ function flipOut() {
 } */
 
 function globeRotate() {
+  document.querySelector(".centerBox").style.height = "400px";
   globe.classList.remove("hide");
   globe.classList.add("animated", "fadeInDown");
   setTimeout(textAppear, 1000);
