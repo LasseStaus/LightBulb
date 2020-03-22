@@ -8,6 +8,7 @@ window.addEventListener("DOMContentLoaded", start);
 const globe = document.querySelector("#peter > div.scene");
 const myButton = document.querySelector(".explore");
 const text = document.querySelector(".textbox");
+const arrow = document.querySelector(".arrow");
 //adds fade-in animation to a href .explore
 //adds eventlistener to .explore and calls function flipOut
 function start() {
@@ -49,4 +50,11 @@ function globeRotate() {
 function textAppear() {
   text.classList.remove("hide");
   text.classList.add("fade-in");
+  arrow.addEventListener("click", fadeOutAll);
+}
+
+function fadeOutAll() {
+  globe.classList.add("animated", "fadeOutUp");
+  text.classList.add("animated", "flipOutY");
+  arrow.classList.add("animated", "lightSpeedOut");
 }
