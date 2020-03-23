@@ -8,7 +8,7 @@ body {
   font-family: "Hammersmith One", sans-serif;
 }
 
-h1 {
+.introtxt {
   color: navajowhite;
   z-index: 9999;
   grid-column: 2 /2;
@@ -24,17 +24,6 @@ h1 {
   align-self: center;
   width: 100%;
   overflow: hidden;
-
-  &::before {
-    content: "";
-    background: $bg-color;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.075) 0%, $bg-color 60%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
 }
 
 @keyframes bg-swing {
@@ -96,7 +85,7 @@ h1 {
   bottom: -60px;
   left: 50%;
   margin-left: -50px;
-  position: absolute;
+  position: fixed;
   border-radius: 100%;
   z-index: -1;
   opacity: 0.25;
@@ -109,48 +98,5 @@ h1 {
   }
   to {
     background-color: rgba(0, 0, 0, 0);
-  }
-}
-
-.noir,
-.noir span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 180px;
-  margin-left: -190px;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 102px;
-  height: 150px;
-  line-height: 166px;
-  margin-top: -75px;
-  perspective: 1000px;
-}
-
-.noir span::before {
-  content: "The evolution of light";
-  padding: 50px;
-  transform: scaleY(-0.25) skew(20deg);
-  opacity: 0.25;
-  background: linear-gradient($bg-color 0%, #000 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: absolute;
-  text-shadow: 0 0 10px #000;
-  top: 10px;
-  left: 10px;
-  animation: text-shadow $animation-speed linear 2s infinite alternate;
-}
-
-@keyframes text-shadow {
-  0% {
-    transform: scaleY(-0.25) skew(-20deg);
-    left: 40px;
-  }
-
-  100% {
-    transform: scaleY(-0.25) skew(20deg);
-    left: 0px;
   }
 }

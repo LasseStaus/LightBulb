@@ -11,6 +11,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: white;
+  overflow: hidden;
 }
 .container {
   width: 100%;
@@ -20,6 +21,7 @@ body {
 .wrapper {
   grid-column: 2 / span 2;
   grid-row: 4 / span 2;
+  z-index: 9000;
 }
 
 /** intro black screens **/
@@ -46,12 +48,12 @@ body {
   margin: 0 auto;
   display: flex;
   float: center;
-  width: 150px;
 
-  color: white;
+  color: navajowhite;
   z-index: 9000;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 50px;
+  font-weight: 200;
 }
 
 .underline {
@@ -59,7 +61,12 @@ body {
   width: 100%;
   margin: 0 auto;
   margin-top: 10px;
-  background-color: black;
+  background-color: navajowhite;
+
+  z-index: 9000;
+}
+
+.drawBorder {
   animation: drawBorder 2s ease forwards;
 }
 
@@ -162,7 +169,7 @@ svg {
 /*** animation ***/
 
 .textbox {
-  margin-top: 40px;
+  margin-top: -100px;
   grid-column: 2 / span 2;
   grid-row: 4 / span 2;
 }

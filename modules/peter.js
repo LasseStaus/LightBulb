@@ -18,6 +18,7 @@ export function start() {
   text.classList.add("hide");
   introTxt.classList.add("hide");
   myButton.classList.add("hide");
+  borderBottom.classList.add("hide");
   setTimeout(introScreen, 4000);
 }
 
@@ -32,6 +33,8 @@ function introScreen() {
 
 function exploreButton() {
   myButton.classList.remove("hide");
+  borderBottom.classList.remove("hide");
+  borderBottom.classList.add("drawBorder");
   myButton.classList.add("animated", "fadeIn");
   myButton.addEventListener("click", flipOut);
 }
@@ -45,7 +48,6 @@ function flipOut() {
   //document.querySelector(".categoryWrapper").classList.add("animated", "fadeOut");
   myButton.classList.add("animated", "flipOutX");
   borderBottom.classList.add("animated", "flipOutX");
-  console.log("click");
   // delay function fetchSvg
   setTimeout(globeRotate, 1200);
 }
@@ -64,6 +66,7 @@ function flipOut() {
 
 function globeRotate() {
   //document.querySelector(".centerBox").style.height = "400px";
+  document.querySelector(".wrapper").classList.add("hide");
   document.querySelector(".box").classList.add("animated", "fadeOut");
   document.querySelector(".left").classList.add("animated", "slideOutLeft");
   document.querySelector(".right").classList.add("animated", "slideOutRight");
