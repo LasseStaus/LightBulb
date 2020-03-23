@@ -79,10 +79,10 @@
       </g>
       <g id="circles">
         <circle id="cirkel1" class="st1 cirkel1 svg-elem-11" data-num="1" cx="88" cy="642" r="21.5"></circle>
-        <circle id="cirkel2" class="st2 cirkel2 svg-elem-12" data-num="2" cx="27" cy="306" r="21.5"></circle>
-        <circle id="cirkel3" class="st3 cirkel3 svg-elem-13" data-num="3" cx="242" cy="48" r="21.5"></circle>
-        <circle id="cirkel4" class="st4 cirkel4 svg-elem-14" data-num="4" cx="584" cy="48" r="21.5"></circle>
-        <circle id="cirkel5" class="st5 cirkel5 svg-elem-15" data-num="5" cx="793" cy="305" r="21.5"></circle>
-        <circle id="cirkel6" class="st6 cirkel6 svg-elem-16" data-num="6" cx="733" cy="642" r="21.5"></circle>
+        <circle id="cirkel2" class="st2 cirkel2 svg-elem-12 unclicked" data-num="2" cx="27" cy="306" r="21.5"></circle>
+        <circle id="cirkel3" class="st3 cirkel3 svg-elem-13 unclicked" data-num="3" cx="242" cy="48" r="21.5"></circle>
+        <circle id="cirkel4" class="st4 cirkel4 svg-elem-14 unclicked" data-num="4" cx="584" cy="48" r="21.5"></circle>
+        <circle id="cirkel5" class="st5 cirkel5 svg-elem-15 unclicked" data-num="5" cx="793" cy="305" r="21.5"></circle>
+        <circle id="cirkel6" class="st6 cirkel6 svg-elem-16 unclicked" data-num="6" cx="733" cy="642" r="21.5"></circle>
       </g>
     </svg>

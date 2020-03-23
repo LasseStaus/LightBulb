@@ -1,3 +1,24 @@
+// SKAL SÆTTES IND I MAIN:
+/* import "@babel/polyfill";
+import { screenTwo } from "./modules/screenTwo";
+import { targetScreen } from "./modules/screenChange";
+("use strict");
+window.addEventListener("DOMContentLoaded", start);
+
+function start() {
+  console.log("start");
+  screenTwo();
+  targetScreen();
+  setTimeout(() => {
+    document.querySelector(".screenI").classList.remove("hide");
+    document.querySelector(".screenI").classList.add("fadeIn");
+  }, 500);
+  setTimeout(() => {
+    document.querySelector(".screenI").classList.remove("fadeIn");
+  }, 1000);
+}
+ */
+
 export function screenTwo() {
   console.log("screenTwo start");
   delegationTwo();
@@ -6,7 +27,6 @@ export function screenTwo() {
 let json = 0;
 let jsonData;
 let facts = [];
-let theChosenColor;
 
 const Facts = {
   header: "",
@@ -52,6 +72,7 @@ function makeObjects() {
 }
 
 function countJSON() {
+  console.log("countJSON");
   json++;
   if (json == 2) {
     fetchList();
@@ -61,19 +82,37 @@ function countJSON() {
 
 function loadAnimations() {
   console.log("loadAnimations");
-  document.querySelector(".next").addEventListener("click", function() {
-    document.querySelector("svg").classList.add("active");
+  document.querySelector(".st1").style.fill = facts[0].color;
+  document.querySelector(".headerTwo").textContent = facts[0].header;
+  document.querySelector(".textTwo").textContent = facts[0].content;
+  document.querySelector(".firstNext").addEventListener("click", function() {
+    setTimeout(() => {
+      document.querySelector("svg").classList.add("active");
+    }, 1000);
     //Klasser der skal sættes når der klikkes på .next fra forrige skærm
     facts.forEach(fact => {
-      document.querySelector(".st1").style.fill = facts[0].color;
-      document.querySelector(".headerTwo").textContent = facts[0].header;
-      document.querySelector(".textTwo").textContent = facts[0].content;
       document.querySelector(".ikon1").classList.add("flipOutX");
       setTimeout(() => {
         document.querySelector(".ikon1").classList.remove("flipOutX");
         document.querySelector(".ikon1").classList.add("flipInX");
         document.querySelector(".ikon1").style.filter = "none";
-      }, 500);
+      }, 900);
+      document.querySelector(".header1").classList.remove("invisible");
+      document.querySelector(".header1").classList.add("pulse");
+    });
+  });
+  document.querySelector(".thirdNext").addEventListener("click", function() {
+    setTimeout(() => {
+      document.querySelector("svg").classList.add("active");
+    }, 1000);
+    //Klasser der skal sættes når der klikkes på .next fra forrige skærm
+    facts.forEach(fact => {
+      document.querySelector(".ikon1").classList.add("flipOutX");
+      setTimeout(() => {
+        document.querySelector(".ikon1").classList.remove("flipOutX");
+        document.querySelector(".ikon1").classList.add("flipInX");
+        document.querySelector(".ikon1").style.filter = "none";
+      }, 900);
       document.querySelector(".header1").classList.remove("invisible");
       document.querySelector(".header1").classList.add("pulse");
     });
@@ -113,18 +152,26 @@ function infoBox(evt) {
         document.querySelector(".ikon" + fact.number).classList.add("flipInX");
       }, 500);
       document.querySelector(".cirkel" + fact.number).style.fill = fact.color;
+      document.querySelector(".cirkel" + fact.number).classList.remove("unclicked");
       document.querySelector(".headerTwo").addEventListener("animationend", removeAnimation);
       document.querySelector(".textTwo").addEventListener("animationend", removeAnimation);
     }
-    if (this.dataset.num == "6") {
-      console.log("Gør NEXT klikbar");
-      document.querySelector(".next").classList.remove("greyed_out");
-      document.querySelector(".next").classList.add("button_pulse");
-    }
   });
+  nextPage();
 }
 function removeAnimation() {
   console.log("noAni");
   document.querySelector(".headerTwo").classList.remove("bounceIn");
   document.querySelector(".textTwo").classList.remove("fadeIn");
+}
+function nextPage() {
+  const unclicked = document.querySelector(".unclicked");
+  console.log("nextPage");
+  if (unclicked) {
+    console.log("unclicked");
+  } else {
+    console.log("clicked");
+    document.querySelector(".secondNext").classList.remove("greyed_out");
+    document.querySelector(".secondNext").classList.remove("noclick");
+  }
 }
