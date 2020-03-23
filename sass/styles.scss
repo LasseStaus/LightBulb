@@ -2,11 +2,11 @@
 @use 'partials/header';
 @use 'partials/mixins';
 @use 'partials/peter';
+@use 'partials/peterlightbulpswing';
 
 body {
   background: vars.$bg-color;
   h1 {
-    color: hotpink;
     @include mixins.flexible();
     &:hover {
       color: blue;
