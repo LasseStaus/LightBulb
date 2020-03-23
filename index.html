@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="sass/styles.scss" />
   </head>
   <body>
-    <section id="peter"></section>
+    <section id="peter" class="screenI hide">
+      <h1>Peter</h1>
+      <img src="static/imgs/lisa/back.png" alt="back" class="back button invisible" />
+      <img src="static/imgs/lisa/home.png" alt="home" class="home button invisible" />
+      <img src="static/imgs/lisa/next.png" alt="next" class="next button button_pulse firstNext" />
+    </section>
 
     <section id="lisa" class="screenII hide">
       <div class="grid-container">
         <!-- Position: absolute -->
+
         <section class="descriptionTwo">
           <h1 class="headerTwo bounceIn">Electricity</h1>
-          <p class="textTwo fadeIn">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa pariatur accusamus amet expedita! At quas reprehenderit natus porro aliquam, earum vitae delectus corporis blanditiis in dicta ipsa quod eveniet molestiae?</p>
+          <p class="textTwo fadeIn"></p>
         </section>
 
         <!-- Øverste linje -->
@@ -75,7 +81,19 @@
       <img src="static/imgs/lisa/next.png" alt="next" class="next button greyed_out noclick secondNext" />
     </section>
 
-    <section id="lasse"></section>
+    <section id="lasse" class="screenIII hide">
+      <h1>Lasse</h1>
+      <img src="static/imgs/lisa/back.png" alt="back" class="back button thirdNext" />
+      <img src="static/imgs/lisa/home.png" alt="home" class="home button" />
+      <img src="static/imgs/lisa/next.png" alt="next" class="next button greyed_out" />
+    </section>
+
+    <section id="peterSlut" class="screenIIII hide">
+      <h1>Peter</h1>
+      <img src="static/imgs/lisa/back.png" alt="back" class="back button" />
+      <img src="static/imgs/lisa/home.png" alt="home" class="home button" />
+      <img src="static/imgs/lisa/next.png" alt="next" class="next button greyed_out invisible" />
+    </section>
 
     <script src="main.js"></script>
   </body>

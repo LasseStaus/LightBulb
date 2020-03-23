@@ -84,7 +84,7 @@ function loadAnimations() {
   console.log("loadAnimations");
   document.querySelector(".st1").style.fill = facts[0].color;
   document.querySelector(".headerTwo").textContent = facts[0].header;
-  document.querySelector(".textTwo").textContent = facts[0].content;
+  document.querySelector(".textTwo").innerHTML = facts[0].content;
   document.querySelector(".firstNext").addEventListener("click", function() {
     setTimeout(() => {
       document.querySelector("svg").classList.add("active");
@@ -146,7 +146,7 @@ function infoBox(evt) {
         document.querySelector(".headerTwo").classList.add("bounceIn");
         document.querySelector(".headerTwo").classList.remove("bounceOut");
         document.querySelector(".headerTwo").textContent = fact.header;
-        document.querySelector(".textTwo").textContent = fact.content;
+        document.querySelector(".textTwo").innerHTML = fact.content;
         document.querySelector(".textTwo").classList.add("fadeIn");
         document.querySelector(".ikon" + fact.number).style.filter = "none";
         document.querySelector(".ikon" + fact.number).classList.add("flipInX");

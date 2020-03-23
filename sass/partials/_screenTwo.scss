@@ -112,9 +112,17 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  padding: 30vh 35vw;
+  padding: 26vh 33vw;
   font-size: 1.5vw;
   pointer-events: none;
+}
+
+.textTwo {
+  line-height: 1.8vw;
+  max-height: 38vh;
+  overflow: hidden;
+  pointer-events: all;
+  text-align: center;
 }
 
 svg {
@@ -179,10 +187,8 @@ svg {
     font-size: 1.3vw;
   }
 }
+
 @media (min-width: 1300px) {
-  .descriptionTwo {
-    font-size: 1.1vw;
-  }
   .item5 {
     padding-right: 2vw;
   }
@@ -191,6 +197,16 @@ svg {
   }
   #lisa h1 {
     font-size: 1.2vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  .descriptionTwo {
+    font-size: 0.9vw;
+  }
+
+  .textTwo {
+    line-height: 1.4vw;
   }
 }
 
