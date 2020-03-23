@@ -11,6 +11,7 @@ const borderBottom = document.querySelector(".underline");
 const text = document.querySelector(".textbox");
 const arrow = document.querySelector(".arrow");
 const introTxt = document.querySelector(".introtxt");
+const bulbWire = document.querySelector(".bulb-wire");
 //adds fade-in animation to a href .explore
 //adds eventlistener to .explore and calls function flipOut
 export function start() {
@@ -27,8 +28,8 @@ function introScreen() {
   introTxt.classList.add("animated", "fadeIn");
   setTimeout(function() {
     introTxt.classList.add("animated", "fadeOut");
-  }, 4500);
-  setTimeout(exploreButton, 9000);
+  }, 4700);
+  setTimeout(exploreButton, 10000);
 }
 
 function exploreButton() {
@@ -44,8 +45,8 @@ function exploreButton() {
 //adds flipoutx animation from animate.css
 
 function flipOut() {
-  //document.querySelector("h1").classList.add("hide");
-  //document.querySelector(".categoryWrapper").classList.add("animated", "fadeOut");
+  bulbWire.classList.add("hide");
+
   myButton.classList.add("animated", "flipOutX");
   borderBottom.classList.add("animated", "flipOutX");
   // delay function fetchSvg
