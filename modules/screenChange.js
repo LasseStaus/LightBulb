@@ -53,5 +53,4 @@ function ShowPrevScreen() {
   const subClass = className.substring(className.indexOf(" "), className.length - 1);
   const newClass = "." + subClass;
   return newClass;
-  document.querySelector(newClass).classList.remove("hide");
 }

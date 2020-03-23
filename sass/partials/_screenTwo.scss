@@ -36,9 +36,11 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 20% 20%20% 10%;
+  margin-bottom: 10vh;
 }
 .grid-item {
   font-size: 2vw;
+  display: flex;
 }
 
 .item1,
@@ -52,7 +54,7 @@ body {
 .item5,
 .item7 {
   grid-row-start: 2;
-  grid-row-end: 4;
+  grid-row-end: 5;
 }
 .item5 {
   padding-right: 4vw;
@@ -60,25 +62,32 @@ body {
 .item7 {
   padding-left: 2vw;
 }
-.item5,
+
 .item8 {
-  display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-end;
 }
-.item7,
+.item5,
+.item7 {
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 2vh;
+}
+
 .item9 {
-  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.item7 {
+  margin-top: 2vh;
   align-items: center;
   justify-content: flex-start;
 }
 .item2 {
-  display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 .item3 {
-  display: flex;
   align-items: flex-end;
   justify-content: center;
 }
@@ -91,8 +100,8 @@ body {
 }
 .item8,
 .item9 {
-  grid-row-start: 4;
-  grid-row-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 7;
 }
 .item11 {
   grid-column-start: 2;
@@ -103,8 +112,8 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  padding: 31vh 35vw;
-  font-size: 1.8vw;
+  padding: 30vh 35vw;
+  font-size: 1.5vw;
   pointer-events: none;
 }
 
@@ -126,9 +135,10 @@ svg {
 .next {
   max-width: 2.3vw;
   max-height: 2.5vw;
-  margin: 8vw 2vw;
 }
-
+.home {
+  margin: 0 4vw;
+}
 .noclick {
   pointer-events: none;
 }
@@ -166,7 +176,7 @@ svg {
 
 @media (min-width: 1000px) {
   .descriptionTwo {
-    font-size: 1.4vw;
+    font-size: 1.3vw;
   }
 }
 @media (min-width: 1300px) {

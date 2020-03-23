@@ -173,5 +173,6 @@ function nextPage() {
     console.log("clicked");
     document.querySelector(".secondNext").classList.remove("greyed_out");
     document.querySelector(".secondNext").classList.remove("noclick");
+    document.querySelector(".secondNext").classList.add("button_pulse");
   }
 }
