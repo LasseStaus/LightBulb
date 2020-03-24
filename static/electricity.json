@@ -1,0 +1,50 @@
+[
+  {
+    "header": "Electricity",
+    "icon": "1.png",
+    "number": "1",
+    "color": "#F73131",
+    "lineColor": "none",
+    "content": "Electric power can be delivered over long distances by transmission lines and used for applications such as motion, light or heat. <br><br> More than 100 years ago, houses were lit with kerosene lamps, food was chilled in iceboxes, and rooms were warmed by wood-burning or coal-burning stoves. It all started with Benjamin Franklin's experiment with a kite one stormy night in Philadelphia, and then the idea of electricity slowly became implicit. <br> In the mid-1800s, a life changing invention saw the light of day; The light bulb. With the light bulb’s electrical light was brought to our homes."
+  },
+  {
+    "header": "Radio",
+    "icon": "2.png",
+    "number": "2",
+    "color": "#ff4e00",
+    "lineColor": "red",
+    "content": "Along with electricity many powerful tools that has changed the world into what it is today emerged. The radio is one of them. <br><br> The radio brought entertainment and news broadcasts into the private homes. The first practical radio transmitters and receivers were developed around 1895-6 by Italian Guglielmo Marconi, and radio began to be used commercially around 1900. <br><br> Radio waves are also used for mobile phones, television braodcasts and WiFi."
+  },
+  {
+    "header": "Appliances",
+    "icon": "3.png",
+    "number": 3,
+    "color": "#0DFF00",
+    "lineColor": "orange",
+    "content": "The more the electricity grid evolved, the more machines were invented to make daily chores easier and faster. That meant machines like the elecvtric owen and stove, the refrigerator, the vacuum cleaner and the dish washer. <br>Before, most women spend their days cleaning, caring for the children, washing clothes and cooking. With these new machines the time they normally spend on chores was reduced and therefore women were suddenly able to get a job outside the home. <br>In other words, the old gender roles were changing."
+  },
+  {
+    "header": "Productivity",
+    "icon": "4.png",
+    "number": "4",
+    "color": "#00FFCE",
+    "lineColor": "green",
+    "content": "As productivity improved in the home, as were factories also becoming more efficient with the help of new electric machines. <br><br>The assembly line method was invented, which increased production at many factories. <br> Heavy and hard work became easier as machines began to do the lifting, pulling and pushing instead of the worker. For some this provided much better working conditions, while others were forced to stand in exhausting positions all day long at the assembly line. <br> As the years went by, the machines became more and more self-propelled, so today they handle most of the work in the assembly line and the employees has more of a supervising task."
+  },
+  {
+    "header": "Transportation",
+    "icon": "5.png",
+    "number": "5",
+    "color": "#0062FF",
+    "lineColor": "turkoise",
+    "content": "Transportation improved as the electrical grid expended. Trains started running on eletricity and the first version af the electric car was invented. <br><br>The electric locomotive was powered by electricity from overhead lines, a third rail or an on-board energy storage such as a battery or a supercapacitor. The first electric passenger train was presented in 1879. The train, consisting of the locomotive and three cars, reached a speed of 13 km/h. <br><br> Electric vehicles first appeared in the mid-19th century, but they were soon abandoned in favor of the internal cumbustion engine vehichles we know today. In the last decade, the electrical cars have had a comeback, because of the environmental advantages "
+  },
+  {
+    "header": "Globalization",
+    "icon": "6.png",
+    "number": "6",
+    "color": "#C000FF",
+    "lineColor": "blue",
+    "content": "With all the various electrical tools we have today, globalization is only growing. This is thanks to both the possibility of cross-country communication regardless of time zones, which we can do by using telephones, WiFi, TV and radio, and our ability to transport ourselves and goods over large distances in a short amount of time. None of this would be possible to the same degree, if electricity had not been invented."
+  }
+]

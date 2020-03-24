@@ -2,7 +2,7 @@
   "name": "lightbulb",
   "version": "0.0.1",
   "description": "Lightbulb assignment",
-  "main": "main.js",
+  "main": "index.html",
   "scripts": {
     "start": "parcel *.html --open",
     "build": "parcel build *.html --public-url ./"
@@ -20,12 +20,12 @@
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.8.3",
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.3.1",
     "sass": "^1.26.3"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
     "@babel/runtime": "^7.8.7",
-    "animate.css": "^3.7.2",
-    "parcel-plugin-static-files-copy": "^2.3.1"
+    "animate.css": "^3.7.2"
   }
 }

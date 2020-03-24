@@ -5,6 +5,24 @@ document.querySelector("h1").textContent = settings.author;
 const data = [{ i: "1.png" }, { i: "2.png" }];
 
 pictures(data, document.body); */
+"use strict";
+import { delegationTwo } from "./modules/screenTwo";
+import { targetScreen } from "./modules/screenChange";
+
+window.addEventListener("DOMContentLoaded", startLisa);
+
+function startLisa() {
+  console.log("start");
+  delegationTwo();
+  targetScreen();
+  setTimeout(() => {
+    document.querySelector(".screenI").classList.remove("hide");
+    document.querySelector(".screenI").classList.add("fadeInL");
+  }, 500);
+  setTimeout(() => {
+    document.querySelector(".screenI").classList.remove("fadeInL");
+  }, 1000);
+}
 
 import "@babel/polyfill";
 

@@ -20,7 +20,7 @@ export function start() {
   introTxt.classList.add("hide");
   myButton.classList.add("hide");
   borderBottom.classList.add("hide");
-  setTimeout(introScreen, 4000);
+  setTimeout(introScreen, 400);
 }
 
 function introScreen() {
@@ -29,7 +29,7 @@ function introScreen() {
   setTimeout(function() {
     introTxt.classList.add("animated", "fadeOut");
   }, 4700);
-  setTimeout(exploreButton, 10000);
+  setTimeout(exploreButton, 1000);
 }
 
 function exploreButton() {
@@ -71,18 +71,27 @@ function textAppear() {
 }
 
 function fadeOutAll() {
+  console.log("fadeOutAll");
   globe.classList.add("animated", "fadeOutUp");
   text.classList.add("animated", "flipOutY");
   arrow.classList.add("animated", "lightSpeedOut");
-  setTimeout(cityBuild, 1200);
+  setTimeout(goScreenTwo, 1200);
+}
+
+function goScreenTwo() {
+  console.log("goScreenTwo");
+  document.querySelector("#peter").style.display = "none";
+  document.querySelector("#lisa").classList.remove("hide");
+  document.querySelector(".thirdNext").addEventListener("click", cityBuild);
 }
 
 //async function fetchSvg
 //fetches svg
 async function cityBuild() {
+  console.log("build");
   let response = await fetch("imgs/peter/purplecity2.svg");
   let mySvgData = await response.text();
-  document.querySelector("#citybuildingitself").innerHTML = mySvgData;
+  document.querySelector("#PetersHuse").innerHTML = mySvgData;
   SvgAnimationCity();
 }
 
