@@ -1,13 +1,14 @@
 // SKAL SÆTTES IND I MAIN:
-/* import "@babel/polyfill";
-import { screenTwo } from "./modules/screenTwo";
+/* "use strict";
+import "@babel/polyfill";
+import { delegationTwo } from "./modules/screenTwo";
 import { targetScreen } from "./modules/screenChange";
-("use strict");
-window.addEventListener("DOMContentLoaded", start);
 
-function start() {
+window.addEventListener("DOMContentLoaded", startLisa);
+
+function startLisa() {
   console.log("start");
-  screenTwo();
+  delegationTwo();
   targetScreen();
   setTimeout(() => {
     document.querySelector(".screenI").classList.remove("hide");
@@ -16,8 +17,8 @@ function start() {
   setTimeout(() => {
     document.querySelector(".screenI").classList.remove("fadeIn");
   }, 1000);
-}
- */
+} */
+
 const HTML = {};
 
 const Facts = {
@@ -86,7 +87,6 @@ function fetchInfo() {
   console.log("fetchList");
   document.querySelectorAll("circle").forEach(bullet => {
     console.log("circle");
-    bullet.style.fill = "transparent";
     bullet.addEventListener("click", infoBox);
   });
   document.querySelectorAll(".article_container").forEach(icon => {
@@ -98,12 +98,17 @@ function fetchInfo() {
 function svgEventListners() {
   const svg = document.querySelector(".lisaSvg");
   document.querySelector(".secondNext").addEventListener("click", function() {
-    svg.classList = "";
+    svg.classList = "lisaSvg";
+    loadAnimations();
   });
-  document.querySelector(".thirdNext").addEventListener("click", function() {
+  document.querySelector(".thirdBack").addEventListener("click", function() {
     setTimeout(() => {
       svg.classList.add("active");
+      HTML.headerTwo.textContent = "Electricity";
+      HTML.headerTwo.classList.add("bounceIn");
+      HTML.headerTwo.classList.remove("bounceOut");
     }, 1000);
+    loadAnimations();
   });
 }
 
@@ -111,6 +116,12 @@ function loadAnimations() {
   console.log("loadAnimations");
   const header1 = document.querySelector(".header1");
   const ikon1 = document.querySelector(".ikon1");
+  const cirkel1 = document.querySelector(".cirkel1");
+  document.querySelectorAll("circle").forEach(circle => {
+    circle.style.fill = "transparent";
+  });
+  cirkel1.style.fill = "red";
+  cirkel1.style.stroke = "red";
   ikon1.classList.add("flipInX");
   header1.classList.remove("invisible");
   header1.classList.add("pulse");
