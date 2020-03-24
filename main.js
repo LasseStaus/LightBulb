@@ -9,6 +9,8 @@ pictures(data, document.body); */
 import "@babel/polyfill";
 
 import { getSVG } from "./modules/lasse";
+import { start as peterStart } from "./modules/peter";
+peterStart();
 
 const data = "imgs/lasse/newtestsvg.svg";
 

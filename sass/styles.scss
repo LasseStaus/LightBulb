@@ -3,21 +3,23 @@
 @use 'partials/mixins';
 @use 'partials/lasse';
 @use 'partials/animate';
+@use 'partials/peter';
+@use 'partials/peterlightbulpswing';
+@use 'partials/citybuildingitself';
 
-body {
+/* body {
   background: vars.$bg-color;
 
   height: 100vh;
   width: 100vw;
   margin: 0 auto;
   h1 {
-    color: hotpink;
     @include mixins.flexible();
     &:hover {
       color: blue;
     }
   }
-}
+} */
 
 .img {
   @include mixins.defaultBorder(5px);

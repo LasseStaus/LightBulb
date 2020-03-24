@@ -124,7 +124,7 @@ function animateElements(bulb, arrow, box, nybulb, containerVar) {
       counter++;
       console.log(counter);
       if (counter == 4) {
-        setTimeout(endOfScreen, 3000);
+        setTimeout(removeBoxes, 3000);
       }
     });
   });
@@ -160,12 +160,12 @@ function createNewBox() {
   }
 }
 
-function endOfScreen() {
+/* function endOfScreen() {
   let button = document.querySelector("button");
   button.style.display = "block";
   button.classList.add("animated", "slideInDown");
   button.addEventListener("click", removeBoxes);
-}
+} */
 
 function removeBoxes() {
   document.querySelector(".l-container").classList.add("animated", "zoomOut");
