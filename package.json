@@ -4,7 +4,7 @@
   "description": "Lightbulb assignment",
   "main": "index.html",
   "scripts": {
-    "start": "parcel *.html --open",
+    "start": "parcel index.html --open",
     "build": "parcel build *.html --public-url ./"
   },
   "repository": {
