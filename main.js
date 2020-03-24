@@ -1,12 +1,13 @@
+"use strict";
 import "@babel/polyfill";
-import { screenTwo } from "./modules/screenTwo";
+import { delegationTwo } from "./modules/screenTwo";
 import { targetScreen } from "./modules/screenChange";
-("use strict");
-window.addEventListener("DOMContentLoaded", start);
 
-function start() {
+window.addEventListener("DOMContentLoaded", startLisa);
+
+function startLisa() {
   console.log("start");
-  screenTwo();
+  delegationTwo();
   targetScreen();
   setTimeout(() => {
     document.querySelector(".screenI").classList.remove("hide");

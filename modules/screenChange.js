@@ -1,36 +1,23 @@
-let newClass;
-
 export function targetScreen() {
   console.log("targetSceen start");
   document.querySelectorAll(".button").forEach(button => {
     button.addEventListener("click", function(event) {
-      event.target.parentNode.classList.add("fadeOut");
+      let parent = event.target.parentNode.classList;
+      const theClass = event.target.classList[0];
+      parent.add("fadeOut");
       setTimeout(() => {
-        event.target.parentNode.classList.add("hide");
-        event.target.parentNode.classList.remove("fadeOut");
+        parent.add("hide");
+        parent.remove("fadeOut");
       }, 500);
-      if (event.target.classList[0] == "next") {
+      if (theClass == "next") {
         const newClass = ShowNextScreen();
-        console.log(newClass);
-        setTimeout(() => {
-          document.querySelector(newClass).classList.remove("hide");
-          document.querySelector(newClass).classList.add("fadeIn");
-        }, 500);
-        setTimeout(() => {
-          document.querySelector(newClass).classList.remove("fadeIn");
-        }, 1000);
+        setClasses(newClass);
       }
-      if (event.target.classList[0] == "back") {
+      if (theClass == "back") {
         const newClass = ShowPrevScreen();
-        setTimeout(() => {
-          document.querySelector(newClass).classList.remove("hide");
-          document.querySelector(newClass).classList.add("fadeIn");
-        }, 500);
-        setTimeout(() => {
-          document.querySelector(newClass).classList.remove("fadeIn");
-        }, 1000);
+        setClasses(newClass);
       }
-      if (event.target.classList[0] == "home") {
+      if (theClass == "home") {
         setTimeout(() => {
           window.location.reload(true);
         }, 500);
@@ -53,4 +40,14 @@ function ShowPrevScreen() {
   const subClass = className.substring(className.indexOf(" "), className.length - 1);
   const newClass = "." + subClass;
   return newClass;
+}
+
+function setClasses(newClass) {
+  setTimeout(() => {
+    document.querySelector(newClass).classList.remove("hide");
+    document.querySelector(newClass).classList.add("fadeIn");
+  }, 500);
+  setTimeout(() => {
+    document.querySelector(newClass).classList.remove("fadeIn");
+  }, 1000);
 }

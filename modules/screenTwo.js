@@ -19,14 +19,14 @@ function start() {
 }
  */
 
-export function screenTwo() {
-  console.log("screenTwo start");
-  delegationTwo();
+export function delegationTwo() {
+  console.log("delegationTwo");
+  initTwo();
+  loadJson();
+  loadPics();
 }
 
-let json = 0;
-let jsonData;
-let facts = [];
+const HTML = {};
 
 const Facts = {
   header: "",
@@ -37,15 +37,17 @@ const Facts = {
   lineColor: ""
 };
 
-function delegationTwo() {
-  console.log("delegationTwo");
-  loadJson();
-  loadPics();
+function initTwo() {
+  HTML.json = 0;
+  HTML.jsonData;
+  HTML.facts = [];
+  HTML.headerTwo = document.querySelector(".headerTwo");
+  HTML.textTwo = document.querySelector(".textTwo");
 }
 
 async function loadJson() {
   let response = await fetch("electricity.json");
-  jsonData = await response.json();
+  HTML.jsonData = await response.json();
   makeObjects();
 }
 async function loadPics() {
@@ -57,7 +59,7 @@ async function loadPics() {
 
 function makeObjects() {
   console.log("makeObjects");
-  jsonData.forEach(entry => {
+  HTML.jsonData.forEach(entry => {
     const timelineObject = Object.create(Facts);
     timelineObject.header = entry.header;
     timelineObject.icon = entry.icon;
@@ -66,113 +68,118 @@ function makeObjects() {
     timelineObject.color = entry.color;
     timelineObject.lineColor = entry.lineColor;
 
-    facts.push(timelineObject);
+    HTML.facts.push(timelineObject);
   });
   countJSON();
 }
 
 function countJSON() {
   console.log("countJSON");
-  json++;
-  if (json == 2) {
-    fetchList();
+  HTML.json++;
+  if (HTML.json == 2) {
+    fetchInfo();
     loadAnimations();
+    svgListners();
   }
+}
+
+function svgListners() {
+  const svg = document.querySelector(".lisaSvg");
+  document.querySelector(".secondNext").addEventListener("click", function() {
+    svg.classList = "";
+  });
+  document.querySelector(".thirdNext").addEventListener("click", function() {
+    setTimeout(() => {
+      svg.classList.add("active");
+    }, 1000);
+  });
 }
 
 function loadAnimations() {
   console.log("loadAnimations");
-  document.querySelector(".st1").style.fill = facts[0].color;
-  document.querySelector(".headerTwo").textContent = facts[0].header;
-  document.querySelector(".textTwo").innerHTML = facts[0].content;
-  document.querySelector(".firstNext").addEventListener("click", function() {
-    setTimeout(() => {
-      document.querySelector("svg").classList.add("active");
-    }, 1000);
-    //Klasser der skal sættes når der klikkes på .next fra forrige skærm
-    facts.forEach(fact => {
-      document.querySelector(".ikon1").classList.add("flipOutX");
-      setTimeout(() => {
-        document.querySelector(".ikon1").classList.remove("flipOutX");
-        document.querySelector(".ikon1").classList.add("flipInX");
-        document.querySelector(".ikon1").style.filter = "none";
-      }, 900);
-      document.querySelector(".header1").classList.remove("invisible");
-      document.querySelector(".header1").classList.add("pulse");
-    });
-  });
-  document.querySelector(".thirdNext").addEventListener("click", function() {
-    setTimeout(() => {
-      document.querySelector("svg").classList.add("active");
-    }, 1000);
-    //Klasser der skal sættes når der klikkes på .next fra forrige skærm
-    facts.forEach(fact => {
-      document.querySelector(".ikon1").classList.add("flipOutX");
-      setTimeout(() => {
-        document.querySelector(".ikon1").classList.remove("flipOutX");
-        document.querySelector(".ikon1").classList.add("flipInX");
-        document.querySelector(".ikon1").style.filter = "none";
-      }, 900);
-      document.querySelector(".header1").classList.remove("invisible");
-      document.querySelector(".header1").classList.add("pulse");
-    });
-  });
+  const header1 = document.querySelector(".header1");
+  const ikon1 = document.querySelector(".ikon1");
+  ikon1.classList.add("flipInX");
+  header1.classList.remove("invisible");
+  header1.classList.add("pulse");
+  header1.textContent = "Electricity";
+  HTML.headerTwo.textContent = "";
+  ikon1.style.filter = "none";
+  document.querySelector(".start_ikon").addEventListener("click", startTimeline);
 }
 
-function fetchList() {
+function startTimeline() {
+  console.log("click_container klik");
+  const svg = document.querySelector(".lisaSvg");
+  document.querySelector(".click_container").classList.add("fadeOut");
+  svg.classList.add("active");
+  setTimeout(() => {
+    console.log("click_container hide");
+    document.querySelector(".click_container").classList.remove("fadeOut");
+    document.querySelector(".click_container").classList.add("hide");
+  }, 500);
+}
+
+function fetchInfo() {
   console.log("fetchList");
   document.querySelectorAll("circle").forEach(bullet => {
     console.log("circle");
     bullet.style.fill = "transparent";
     bullet.addEventListener("click", infoBox);
   });
+  document.querySelectorAll(".article_container").forEach(icon => {
+    console.log("circle");
+    icon.addEventListener("click", infoBox);
+  });
 }
 
 function infoBox(evt) {
   console.log("infoBox");
-  facts.forEach(fact => {
+  HTML.facts.forEach(fact => {
     if (this.dataset.num == fact.number) {
       console.log(this.dataset.num);
-      document.querySelector(".header" + fact.number).classList.remove("invisible");
-      document.querySelector(".header" + fact.number).classList.add("pulse");
-      document.querySelector("svg").classList.add(fact.lineColor);
-      document.querySelector(".header" + fact.number).textContent = fact.header;
-      document.querySelector(".headerTwo").classList.add("bounceOut");
-      document.querySelector(".textTwo").classList.add("fadeOut");
-      document.querySelector(".ikon" + fact.number).classList.add("flipOutX");
+      const headerObject = document.querySelector(".header" + fact.number);
+      const iconObject = document.querySelector(".ikon" + fact.number);
+      const circleObject = document.querySelector(".cirkel" + fact.number);
+      headerObject.classList.remove("invisible");
+      headerObject.classList.add("pulse");
+      headerObject.textContent = fact.header;
+      HTML.headerTwo.classList.add("bounceOut");
+      HTML.textTwo.classList.add("fadeOut");
+      iconObject.classList.add("flipOutX");
+      document.querySelector(".lisaSvg").classList.add(fact.lineColor);
       setTimeout(() => {
-        document.querySelector(".ikon" + fact.number).classList.remove("flipOutX");
-        document.querySelector(".textTwo").classList.remove("fadeOut");
-        document.querySelector(".headerTwo").classList.add("bounceIn");
-        document.querySelector(".headerTwo").classList.remove("bounceOut");
-        document.querySelector(".headerTwo").textContent = fact.header;
-        document.querySelector(".textTwo").innerHTML = fact.content;
-        document.querySelector(".textTwo").classList.add("fadeIn");
-        document.querySelector(".ikon" + fact.number).style.filter = "none";
-        document.querySelector(".ikon" + fact.number).classList.add("flipInX");
+        iconObject.classList.remove("flipOutX");
+        HTML.textTwo.classList.remove("fadeOut");
+        HTML.headerTwo.classList.add("bounceIn");
+        HTML.headerTwo.classList.remove("bounceOut");
+        HTML.headerTwo.textContent = fact.header;
+        HTML.textTwo.innerHTML = fact.content;
+        HTML.textTwo.classList.add("fadeIn");
+        iconObject.style.filter = "none";
+        iconObject.classList.add("flipInX");
       }, 500);
-      document.querySelector(".cirkel" + fact.number).style.fill = fact.color;
-      document.querySelector(".cirkel" + fact.number).classList.remove("unclicked");
-      document.querySelector(".headerTwo").addEventListener("animationend", removeAnimation);
-      document.querySelector(".textTwo").addEventListener("animationend", removeAnimation);
+      circleObject.style.fill = fact.color;
+      circleObject.classList.remove("unclicked");
+      HTML.headerTwo.addEventListener("animationend", removeAnimation);
+      HTML.textTwo.addEventListener("animationend", removeAnimation);
     }
   });
   nextPage();
 }
 function removeAnimation() {
-  console.log("noAni");
-  document.querySelector(".headerTwo").classList.remove("bounceIn");
-  document.querySelector(".textTwo").classList.remove("fadeIn");
+  console.log("removeAnimation");
+  HTML.headerTwo.classList.remove("bounceIn");
+  HTML.textTwo.classList.remove("fadeIn");
 }
 function nextPage() {
-  const unclicked = document.querySelector(".unclicked");
   console.log("nextPage");
+  const unclicked = document.querySelector(".unclicked");
+  const secondNext = document.querySelector(".secondNext");
   if (unclicked) {
-    console.log("unclicked");
   } else {
-    console.log("clicked");
-    document.querySelector(".secondNext").classList.remove("greyed_out");
-    document.querySelector(".secondNext").classList.remove("noclick");
-    document.querySelector(".secondNext").classList.add("button_pulse");
+    secondNext.classList.remove("greyed_out");
+    secondNext.classList.remove("noclick");
+    secondNext.classList.add("button_pulse");
   }
 }
