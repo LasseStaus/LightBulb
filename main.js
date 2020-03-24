@@ -8,7 +8,7 @@ pictures(data, document.body); */
 
 import "@babel/polyfill";
 
-import { getSVG, gallery } from "./modules/lasse";
+import { getSVG } from "./modules/lasse";
 
 const data = "imgs/lasse/newtestsvg.svg";
 

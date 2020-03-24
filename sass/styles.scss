@@ -2,6 +2,7 @@
 @use 'partials/header';
 @use 'partials/mixins';
 @use 'partials/lasse';
+@use 'partials/animate';
 
 body {
   background: vars.$bg-color;
@@ -18,6 +19,6 @@ body {
   }
 }
 
-img {
+.img {
   @include mixins.defaultBorder(5px);
 }

@@ -1,3 +1,16 @@
+let textContainerVar;
+let textVar;
+let counter;
+let pictureVar;
+let containerVar;
+let b1, b2, b3, b4, a1, a2, a3, a4, bottom, box1, box2, box3, box4;
+
+//icon data
+const data1 = [{ i: "desktop.svg" }, { i: "lamp.svg" }];
+const data2 = [{ i: "desktop.svg" }, { i: "desktop.svg" }, { i: "desktop.svg" }];
+const data3 = [{ i: "desktop.svg" }, { i: "desktop.svg" }, { i: "desktop.svg" }];
+const data4 = [{ i: "desktop.svg" }, { i: "desktop.svg" }, { i: "desktop.svg" }];
+
 export async function getSVG(data, parent) {
   const response = await fetch(data);
   const mySVG = await response.text();
@@ -7,6 +20,11 @@ export async function getSVG(data, parent) {
 function text(textVar, parent, type) {
   const l = createElement(type);
   l.textContent = textVar;
+  /*   setTimeout(() => {
+    l.classList.add("animated", "zoomIn");
+    parent.appendChild(l);
+  }, 2000); */
+
   parent.appendChild(l);
 }
 
@@ -21,18 +39,6 @@ function gallery(data, parent, type) {
 function createElement(type) {
   return document.createElement(type);
 }
-
-let textVar = "this is a test";
-let counter = 0;
-let pictureVar;
-let containerVar;
-let b1, b2, b3, b4, a1, a2, a3, a4, bottom, box1, box2, box3, box4;
-
-//icon data
-const data1 = [{ i: "desktop.svg" }, { i: "desktop.svg" }];
-const data2 = [{ i: "desktop.svg" }, { i: "desktop.svg" }, { i: "desktop.svg" }];
-const data3 = [{ i: "desktop.svg" }, { i: "desktop.svg" }, { i: "desktop.svg" }];
-const data4 = [{ i: "desktop.svg" }, { i: "desktop.svg" }, { i: "desktop.svg" }];
 
 function hideSVGParts() {
   b1 = document.querySelector("#bulb1 polygon");
@@ -70,62 +76,103 @@ function hideSVGParts() {
   element.addEventListener("animationend", () => {
     b1.setAttribute("stroke-width", "2px");
     b1.classList.add("dash");
+    b1.addEventListener("animationend", () => {
+      document.querySelector("#shadow").style.display = "block";
+      document.querySelector("#shadow polyline").style.fill = "black";
+      document.querySelector("#shadow").classList.add("animated", "flipInX");
+    });
+    counter = 0;
     createEventlisteners();
   });
 }
+function createEventlisteners() {
+  console.log("create eventlsiterne");
+  b1.addEventListener("click", createNewBox);
+}
 
-function test(bulb, arrow, box, nybulb, containerVar) {
-  bulb.style.fill = "blue";
+function circleColor(arrow) {
+  console.log(arrow);
+  setTimeout((arrow.style.fill = "#FEE503"), 2000);
+}
+function animateElements(bulb, arrow, box, nybulb, containerVar) {
+  bulb.removeEventListener("click", createNewBox);
+  bulb.style.fill = "#FEE503";
   arrow.setAttribute("stroke-width", "2px");
   arrow.classList.add("dash");
 
   gallery(pictureVar, containerVar, "img");
-  text(textVar, box, "p");
+  text(textVar, textContainerVar, "p");
   arrow.addEventListener("animationend", () => {
-    box.style.display = "flex";
+    box.style.display = "grid";
     if (counter == 0 || counter == 2) {
+      circleColor(arrow);
       box.classList.add("animated", "slideInLeft");
+
+      /*  box.addEventListener("animationend", () => {
+        document.querySelector(".box1 .tekst-container").style.color = "black";
+        document.querySelector(".box1 .tekst-container").classList.add("animated", "zoomIn");
+      }); */
     } else {
+      circleColor(arrow);
+
       box.classList.add("animated", "slideInRight");
     }
     box.addEventListener("animationend", () => {
       nybulb.setAttribute("stroke-width", "2px");
       nybulb.classList.add("dash");
-      bulb.removeEventListener("click", tis);
-      nybulb.addEventListener("click", tis);
+      nybulb.addEventListener("click", createNewBox);
       counter++;
       console.log(counter);
       if (counter == 4) {
-        document.querySelector(".l-container").classList.add("animated", "zoomOut");
+        setTimeout(endOfScreen, 3000);
       }
     });
   });
 }
-
-function createEventlisteners() {
-  console.log("create eventlsiterne");
-  b1.addEventListener("click", tis);
-}
-
-function tis() {
+function createNewBox() {
   if (counter == 0) {
     pictureVar = data1;
     containerVar = document.querySelector(".box1 .icon-container");
+    textContainerVar = document.querySelector(".box1 .tekst-container");
+
+    textVar = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora unde quod delectus molestiae facilis. Eos autem vitae sequi error hic reprehenderit. Officiis rem qui excepturi eum praesentium porro quia.";
     console.log(containerVar);
-    test(b1, a1, box1, b2, containerVar);
+    animateElements(b1, a1, box1, b2, containerVar);
   } else if (counter == 1) {
     containerVar = document.querySelector(".box2 .icon-container");
+
+    textContainerVar = document.querySelector(".box2 .tekst-container");
+    textVar = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora unde quod delectus molestiae facilis. Eos autem vitae sequi error hic reprehenderit. Officiis rem qui excepturi eum praesentium porro quia.";
     pictureVar = data2;
-    test(b2, a2, box2, b3, containerVar);
+    animateElements(b2, a2, box2, b3, containerVar);
   } else if (counter == 2) {
     containerVar = document.querySelector(".box3 .icon-container");
+    textContainerVar = document.querySelector(".box3 .tekst-container");
+    textVar = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora unde quod delectus molestiae facilis. Eos autem vitae sequi error hic reprehenderit. Officiis rem qui excepturi eum praesentium porro quia.";
     pictureVar = data3;
-    test(b3, a3, box3, b4, containerVar);
+    animateElements(b3, a3, box3, b4, containerVar);
   } else if (counter == 3) {
     containerVar = document.querySelector(".box4 .icon-container");
+    textContainerVar = document.querySelector(".box4 .tekst-container");
+    textVar = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora unde quod delectus molestiae facilis. Eos autem vitae sequi error hic reprehenderit. Officiis rem qui excepturi eum praesentium porro quia.";
     pictureVar = data4;
-    test(b4, a4, box4, b4, containerVar);
+    animateElements(b4, a4, box4, b4, containerVar);
   }
 }
 
-// sæt box til farve, tegn pil, animate box, tegn ny box.
+function endOfScreen() {
+  let button = document.querySelector("button");
+  button.style.display = "block";
+  button.classList.add("animated", "slideInDown");
+  button.addEventListener("click", removeBoxes);
+}
+
+function removeBoxes() {
+  document.querySelector(".l-container").classList.add("animated", "zoomOut");
+  document.querySelector(".l-container").addEventListener("animationend", () => {
+    document.querySelector(".box1").classList.add("animated", "slideOutLeft");
+    document.querySelector(".box3").classList.add("animated", "slideOutLeft");
+    document.querySelector(".box2").classList.add("animated", "slideOutRight");
+    document.querySelector(".box4").classList.add("animated", "slideOutRight");
+  });
+}
