@@ -18,14 +18,6 @@ function start() {
   }, 1000);
 }
  */
-
-export function delegationTwo() {
-  console.log("delegationTwo");
-  initTwo();
-  loadJson();
-  loadPics();
-}
-
 const HTML = {};
 
 const Facts = {
@@ -37,7 +29,14 @@ const Facts = {
   lineColor: ""
 };
 
-function initTwo() {
+export function delegationTwo() {
+  console.log("delegationTwo");
+  globalVars();
+  loadJson();
+  loadPics();
+}
+
+function globalVars() {
   HTML.json = 0;
   HTML.jsonData;
   HTML.facts = [];
@@ -79,11 +78,24 @@ function countJSON() {
   if (HTML.json == 2) {
     fetchInfo();
     loadAnimations();
-    svgListners();
+    svgEventListners();
   }
 }
 
-function svgListners() {
+function fetchInfo() {
+  console.log("fetchList");
+  document.querySelectorAll("circle").forEach(bullet => {
+    console.log("circle");
+    bullet.style.fill = "transparent";
+    bullet.addEventListener("click", infoBox);
+  });
+  document.querySelectorAll(".article_container").forEach(icon => {
+    console.log("circle");
+    icon.addEventListener("click", infoBox);
+  });
+}
+
+function svgEventListners() {
   const svg = document.querySelector(".lisaSvg");
   document.querySelector(".secondNext").addEventListener("click", function() {
     svg.classList = "";
@@ -106,6 +118,7 @@ function loadAnimations() {
   HTML.headerTwo.textContent = "";
   ikon1.style.filter = "none";
   document.querySelector(".start_ikon").addEventListener("click", startTimeline);
+  removeAnimation();
 }
 
 function startTimeline() {
@@ -118,19 +131,6 @@ function startTimeline() {
     document.querySelector(".click_container").classList.remove("fadeOut");
     document.querySelector(".click_container").classList.add("hide");
   }, 500);
-}
-
-function fetchInfo() {
-  console.log("fetchList");
-  document.querySelectorAll("circle").forEach(bullet => {
-    console.log("circle");
-    bullet.style.fill = "transparent";
-    bullet.addEventListener("click", infoBox);
-  });
-  document.querySelectorAll(".article_container").forEach(icon => {
-    console.log("circle");
-    icon.addEventListener("click", infoBox);
-  });
 }
 
 function infoBox(evt) {

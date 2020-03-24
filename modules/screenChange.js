@@ -10,12 +10,12 @@ export function targetScreen() {
         parent.remove("fadeOut");
       }, 500);
       if (theClass == "next") {
-        const newClass = ShowNextScreen();
-        setClasses(newClass);
+        const newClass = findNextScreen();
+        displayScreen(newClass);
       }
       if (theClass == "back") {
-        const newClass = ShowPrevScreen();
-        setClasses(newClass);
+        const newClass = findPrevScreen();
+        displayScreen(newClass);
       }
       if (theClass == "home") {
         setTimeout(() => {
@@ -26,7 +26,7 @@ export function targetScreen() {
   });
 }
 
-function ShowNextScreen() {
+function findNextScreen() {
   console.log("setClassNames");
   const className = event.target.parentNode.classList[0];
   console.log(event.target.parentNode.classList[0]);
@@ -35,14 +35,14 @@ function ShowNextScreen() {
   return newClass;
 }
 
-function ShowPrevScreen() {
+function findPrevScreen() {
   const className = event.target.parentNode.classList[0];
   const subClass = className.substring(className.indexOf(" "), className.length - 1);
   const newClass = "." + subClass;
   return newClass;
 }
 
-function setClasses(newClass) {
+function displayScreen(newClass) {
   setTimeout(() => {
     document.querySelector(newClass).classList.remove("hide");
     document.querySelector(newClass).classList.add("fadeIn");
