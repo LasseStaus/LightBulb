@@ -32,7 +32,7 @@ function museumAni() {
   borderBottom.classList.add("phide");
   logo.style.display = "block";
   logo.classList.add("animated", "zoomIn");
-  //  logo.classList.add("slower");
+  logo.classList.add("slower");
   logo.addEventListener("animationend", () => {
     logoText1.style.display = "block";
     logoText1.classList.add("animated", "fadeIn");
@@ -58,7 +58,7 @@ function aftermuseum() {
   document.querySelector("#peter .introScreen").classList.add("slower");
   bulbWire.classList.add("animationBulb");
 
-  setTimeout(introScreen, 100); //2000
+  setTimeout(introScreen, 2000); //2000
 }
 
 function introScreen() {
@@ -67,7 +67,7 @@ function introScreen() {
   setTimeout(function() {
     introTxt.classList.add("animated", "fadeOut");
   }, 4700);
-  setTimeout(exploreButton, 100); //8000
+  setTimeout(exploreButton, 8000); //8000
 }
 
 function exploreButton() {
