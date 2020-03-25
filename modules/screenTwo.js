@@ -75,7 +75,7 @@ function fetchInfo() {
 }
 
 function svgEventListners() {
-  /* const svg = document.querySelector(".lisaSvg");
+  const svg = document.querySelector(".lisaSvg");
   document.querySelector(".secondNext").addEventListener("click", function() {
     svg.classList = "lisaSvg";
     loadAnimations();
@@ -88,7 +88,7 @@ function svgEventListners() {
       HTML.headerTwo.classList.remove("bounceOutL");
     }, 1000);
     loadAnimations();
-  }); */
+  });
 }
 
 function loadAnimations() {
