@@ -82,7 +82,7 @@ function fadeOutAll() {
 function goScreenTwo() {
   console.log("goScreenTwo");
   document.querySelector("#peter").style.display = "none";
-  document.querySelector("#lisa").classList.remove("phide");
+  document.querySelector("#lisa").classList.remove("hide");
   document.querySelector(".thirdNext").addEventListener("click", cityBuild);
 }
 

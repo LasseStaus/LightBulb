@@ -16,7 +16,7 @@ export async function getSVG(data, parent) {
   const mySVG = await response.text();
   parent.innerHTML = mySVG;
   next = document.querySelector("#lasse .next");
-  removeBoxes();
+  hideSVGParts();
 }
 function text(textVar, parent, type) {
   const l = createElement(type);
