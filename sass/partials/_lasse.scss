@@ -31,22 +31,24 @@ svg {
   overflow: hidden;
   width: 100vw;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(16, 1fr);
   height: 100vh;
   justify-items: center;
   align-items: center;
+  background: linear-gradient(180deg, mintcream 0%, #fff8f8 96%, #eeeeee 100%);
 }
 
 #lasse .icon-container {
 }
-#lasse img {
+#lasse .tekstImg {
   height: 80px;
   padding: 1em;
 }
 #lasse .l-container {
-  grid-column: 2;
-  grid-row: 2 / span 6;
+  margin-right: 20px;
+  grid-column: 3 / span 4;
+  grid-row: 4 / span 10;
   transition: 3s ease-in-out;
 }
 
@@ -90,24 +92,26 @@ svg {
   grid-row: 1 / span 2;
 } */
 #lasse .box1 {
-  grid-column: 1;
-  grid-row: 5;
+  grid-column: 1 / span 3;
+  grid-row: 8 / span 3;
   display: none;
 }
 #lasse .box3 {
-  grid-column: 1;
-  grid-row: 3 / span 2;
+  grid-column: 1 / span 3;
+  grid-row: 5 / span 3;
+
   display: none;
 }
 
 #lasse .box4 {
-  grid-column: 3;
-  grid-row: 3;
+  grid-column: 6 / span 3;
+  grid-row: 3 / span 4;
+
   display: none;
 }
 #lasse .box2 {
-  grid-column: 3;
-  grid-row: 4 / span 2;
+  grid-column: 6 / span 3;
+  grid-row: 7 / span 3;
   display: none;
 }
 
@@ -127,4 +131,19 @@ svg {
   to {
     stroke-dashoffset: 4000;
   }
+}
+
+#lasse .back {
+  grid-row: 15;
+  grid-column: 4;
+}
+
+#lasse .home {
+  grid-row: 15;
+  grid-column: 4 / span 2;
+}
+#lasse .next {
+  grid-column: 5;
+
+  grid-row: 15;
 }

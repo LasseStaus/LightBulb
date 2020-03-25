@@ -6,15 +6,16 @@ let containerVar;
 let b1, b2, b3, b4, a1, a2, a3, a4, bottom, box1, box2, box3, box4;
 
 //icon data
-const data1 = [{ i: "desktop.svg" }, { i: "lamp.svg" }];
-const data2 = [{ i: "desktop.svg" }, { i: "desktop.svg" }, { i: "desktop.svg" }];
-const data3 = [{ i: "desktop.svg" }, { i: "desktop.svg" }, { i: "desktop.svg" }];
-const data4 = [{ i: "desktop.svg" }, { i: "desktop.svg" }, { i: "desktop.svg" }];
-
+const data1 = [{ i: "house_2.svg" }];
+const data2 = [{ i: "tablets_2.svg" }];
+const data3 = [{ i: "tv_2.svg" }];
+const data4 = [{ i: "society_2.svg" }];
+let next;
 export async function getSVG(data, parent) {
   const response = await fetch(data);
   const mySVG = await response.text();
   parent.innerHTML = mySVG;
+  next = document.querySelector("#lasse .next");
   hideSVGParts();
 }
 function text(textVar, parent, type) {
@@ -32,6 +33,7 @@ function gallery(data, parent, type) {
   data.forEach(d => {
     const t = createElement(type);
     t.src = "imgs/lasse/" + d.i;
+    t.classList.add("tekstImg");
     parent.appendChild(t);
   });
 }
@@ -124,7 +126,7 @@ function animateElements(bulb, arrow, box, nybulb, containerVar) {
       counter++;
       console.log(counter);
       if (counter == 4) {
-        setTimeout(removeBoxes, 3000);
+        setTimeout(removeBoxes, 300);
       }
     });
   });
@@ -135,26 +137,26 @@ function createNewBox() {
     containerVar = document.querySelector(".box1 .icon-container");
     textContainerVar = document.querySelector(".box1 .tekst-container");
 
-    textVar = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora unde quod delectus molestiae facilis. Eos autem vitae sequi error hic reprehenderit. Officiis rem qui excepturi eum praesentium porro quia.";
+    textVar = "Back before the invention of the light bulb, you probably would've reached for a candle or an oil lamp. One of the most significant changes in everyday life, was the possibility for normal citizens to light up their house with electricity.  ";
     console.log(containerVar);
     animateElements(b1, a1, box1, b2, containerVar);
   } else if (counter == 1) {
     containerVar = document.querySelector(".box2 .icon-container");
 
     textContainerVar = document.querySelector(".box2 .tekst-container");
-    textVar = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora unde quod delectus molestiae facilis. Eos autem vitae sequi error hic reprehenderit. Officiis rem qui excepturi eum praesentium porro quia.";
+    textVar = "IPhones & tablets would not have been invented without the light bulbs. These are a just a small fraction of the many inventions we in todays society consider to be common in our everyday modern lifestyle. Could you imagine your life without these inventions?";
     pictureVar = data2;
     animateElements(b2, a2, box2, b3, containerVar);
   } else if (counter == 2) {
     containerVar = document.querySelector(".box3 .icon-container");
     textContainerVar = document.querySelector(".box3 .tekst-container");
-    textVar = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora unde quod delectus molestiae facilis. Eos autem vitae sequi error hic reprehenderit. Officiis rem qui excepturi eum praesentium porro quia.";
+    textVar = "Without light bulbs, today’s generation would still be listening to the radio for amusement rather than watching T.V. or playing video games.";
     pictureVar = data3;
     animateElements(b3, a3, box3, b4, containerVar);
   } else if (counter == 3) {
     containerVar = document.querySelector(".box4 .icon-container");
     textContainerVar = document.querySelector(".box4 .tekst-container");
-    textVar = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora unde quod delectus molestiae facilis. Eos autem vitae sequi error hic reprehenderit. Officiis rem qui excepturi eum praesentium porro quia.";
+    textVar = "The light bulb had many significant impacts on society. People now had light at all times of the day, which made it possible for social gatherings & extended work hours. The days became longer, changed the perspective of life, and prompted the beginning of a new era in modern lifestyle.  ";
     pictureVar = data4;
     animateElements(b4, a4, box4, b4, containerVar);
   }
@@ -168,11 +170,15 @@ function createNewBox() {
 } */
 
 function removeBoxes() {
-  document.querySelector(".l-container").classList.add("animated", "zoomOut");
+  next.classList.remove("greyed_out");
+  next.classList.remove("noclick");
+  next.classList.add("button_pulse");
+
+  /*   document.querySelector(".l-container").classList.add("animated", "zoomOut");
   document.querySelector(".l-container").addEventListener("animationend", () => {
     document.querySelector(".box1").classList.add("animated", "slideOutLeft");
     document.querySelector(".box3").classList.add("animated", "slideOutLeft");
     document.querySelector(".box2").classList.add("animated", "slideOutRight");
     document.querySelector(".box4").classList.add("animated", "slideOutRight");
-  });
+  }); */
 }
