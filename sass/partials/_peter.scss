@@ -2,8 +2,8 @@ body {
   margin: 0;
   padding: 0;
 }
-#peter,
-#PetersHuse {
+
+#peter {
   display: grid;
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(4, 1fr);
@@ -13,6 +13,41 @@ body {
   height: 100%;
   background-color: white;
   overflow: hidden;
+}
+#citybuildingitself {
+  display: grid;
+  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #011650;
+  overflow: hidden;
+}
+
+#PetersHuse {
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / span 8;
+  grid-row: 1 / span 12;
+}
+
+#citybuildingitself .back {
+  grid-row: 15;
+  grid-column: 4;
+  filter: brightness(19.5);
+}
+
+#citybuildingitself .home {
+  grid-row: 15;
+  grid-column: 4 / span 2;
+  filter: brightness(19.5);
+}
+#citybuildingitself .next {
+  grid-column: 5;
+
+  grid-row: 14 / span 2;
 }
 
 #peter .container {
@@ -24,6 +59,9 @@ body {
   grid-column: 2 / span 2;
   grid-row: 4 / span 2;
   z-index: 9000;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
 
 /** intro black screens **/
@@ -45,10 +83,19 @@ body {
 }
 
 /* Button explore*/
+#peter .introtxt {
+  color: navajowhite;
+  z-index: 9999;
+  grid-column: 2 / span 2;
+  font-weight: 200;
+  grid-row: 1;
+  pointer-events: none;
+}
 
 #peter .explore {
   margin: 0 auto;
-  display: flex;
+
+  letter-spacing: 10px;
   float: center;
 
   color: navajowhite;
@@ -56,16 +103,23 @@ body {
   text-transform: uppercase;
   font-size: 50px;
   font-weight: 200;
-  margin-top: -90px;
+
   transform: scale(0.5);
   transition: 2s ease-in;
 }
+.wrapper a {
+  text-decoration: none;
+  grid-column: 2 / span 2;
+  grid-row: 2;
+}
 
 #peter .underline {
-  height: 1px;
-  width: 50%;
+  height: 2px;
+  width: 100px;
   margin: 0 auto;
   background-color: navajowhite;
+  grid-column: 2 / span 2;
+  grid-row: 3;
 
   z-index: 9000;
 }
@@ -76,10 +130,10 @@ body {
 
 @keyframes drawBorder {
   from {
-    width: 0%;
+    width: 0px;
   }
   to {
-    width: 50%;
+    width: 100px;
   }
 }
 
@@ -173,16 +227,15 @@ svg {
 /*** animation ***/
 
 #peter .textbox {
-  margin-top: -100px;
-  grid-column: 2 / span 2;
-  grid-row: 4 / span 2;
+  grid-column: 1 / span 4;
+  grid-row: 4 / span 4;
 }
 
 #peter p {
   white-space: nowrap;
   overflow: hidden;
   font-family: "Source Code Pro", monospace;
-  font-size: 16px;
+  font-size: 22px;
   color: black;
   display: flex;
   margin: 0 auto;
@@ -232,7 +285,7 @@ svg {
     width: 0;
   }
   to {
-    width: 391px;
+    width: 484px;
   }
 }
 
@@ -241,7 +294,7 @@ svg {
     width: 0;
   }
   to {
-    width: 345px;
+    width: 435px;
   }
 }
 
@@ -250,7 +303,7 @@ svg {
     width: 0;
   }
   to {
-    width: 403px;
+    width: 521px;
   }
 }
 
@@ -271,7 +324,7 @@ svg {
 }
 
 #peter .scene {
-  perspective: 1000px;
+  perspective: 1400px;
   grid-column: 2 / span 2;
   grid-row: 2;
 }
@@ -358,12 +411,12 @@ svg {
 }
 /* Clip the sphere a bit */
 .clip {
-  clip-path: circle(48%);
+  clip-path: circle(49%);
 }
 
 /** hide **/
 
-.hide {
+.phide {
   display: none;
 }
 
@@ -372,12 +425,11 @@ svg {
 .arrowwrapper {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 130px;
 }
 
 .item {
   margin: 0 auto;
-  margin-top: -20px;
 }
 
 #peter button {
@@ -395,8 +447,9 @@ svg {
 }
 
 #peter .arrowsvg {
-  width: 20px;
+  width: 61px;
   border: none;
+  margin-right: 10px;
 }
 
 .arrow1 {

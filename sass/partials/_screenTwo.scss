@@ -60,7 +60,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 20% 20%20% 10%;
-  margin-bottom: 10vh;
+  margin-bottom: 13vh;
 }
 #lisa .grid-item {
   font-size: 2vw;
@@ -162,12 +162,11 @@ body {
   filter: grayscale(100%);
   margin-bottom: 0.5vh;
 }
-
-#lisa .home,
-#lisa .back,
-#lisa .next {
-  max-width: 2.3vw;
-  max-height: 2.5vw;
+.home,
+.back,
+.next {
+  width: 2.3vw;
+  height: 2.5vw;
 }
 #lisa .home {
   margin: 0 4vw;
