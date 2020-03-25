@@ -15,12 +15,12 @@ body {
   overflow: hidden;
 }
 
-.container {
+#peter .container {
   width: 100%;
   height: 100vh;
 }
 
-.wrapper {
+#peter .wrapper {
   grid-column: 2 / span 2;
   grid-row: 4 / span 2;
   z-index: 9000;
@@ -28,7 +28,7 @@ body {
 
 /** intro black screens **/
 
-.left {
+#peter .left {
   background-color: black;
   grid-column: 1 / span 2;
   grid-row: 1 / span 8;
@@ -36,7 +36,7 @@ body {
   height: 100%;
 }
 
-.right {
+#peter .right {
   background-color: black;
   grid-column: 3 / span 2;
   grid-row: 1 / span 8;
@@ -46,7 +46,7 @@ body {
 
 /* Button explore*/
 
-.explore {
+#peter .explore {
   margin: 0 auto;
   display: flex;
   float: center;
@@ -61,7 +61,7 @@ body {
   transition: 2s ease-in;
 }
 
-.underline {
+#peter .underline {
   height: 1px;
   width: 50%;
   margin: 0 auto;
@@ -70,7 +70,7 @@ body {
   z-index: 9000;
 }
 
-.drawBorder {
+#peter .drawBorder {
   animation: drawBorder 2s ease forwards;
 }
 
@@ -172,13 +172,13 @@ svg {
 /** text writing it self **/
 /*** animation ***/
 
-.textbox {
+#peter .textbox {
   margin-top: -100px;
   grid-column: 2 / span 2;
   grid-row: 4 / span 2;
 }
 
-p {
+#peter p {
   white-space: nowrap;
   overflow: hidden;
   font-family: "Source Code Pro", monospace;
@@ -189,10 +189,10 @@ p {
   text-align: center;
 }
 
-.paragraph1,
-.paragraph2,
-.paragraph3,
-.paragraph4 {
+#peter .paragraph1,
+#peter .paragraph2,
+#peter .paragraph3,
+#peter .paragraph4 {
   display: flex;
   margin: 0 auto;
   margin-bottom: 10px;
@@ -200,19 +200,19 @@ p {
 }
 
 /* Animation */
-.paragraph1 {
+#peter .paragraph1 {
   animation: animated-text1 2s steps(30, end) 1s 1 normal both;
 }
 
-.paragraph2 {
+#peter .paragraph2 {
   animation: animated-text2 3s steps(30, end) 4s 1 normal both;
 }
 
-.paragraph3 {
+#peter .paragraph3 {
   animation: animated-text3 3s steps(30, end) 9s 1 normal both;
 }
 
-.paragraph4 {
+#peter .paragraph4 {
   animation: animated-text4 3s steps(30, end) 13s 1 normal both;
 }
 
@@ -270,12 +270,12 @@ p {
   }
 }
 
-.scene {
+#peter .scene {
   perspective: 1000px;
   grid-column: 2 / span 2;
   grid-row: 2;
 }
-.container {
+#peter .container {
   margin-top: 5vh;
   margin-left: auto;
   margin-right: auto;
@@ -288,10 +288,10 @@ p {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-.border {
+#peter .border {
   border: 1px solid black;
 }
-.circle {
+#peter .circle {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -299,51 +299,51 @@ p {
   background: radial-gradient(lightblue, transparent);
 }
 /* X Axis */
-.circle:nth-child(1) {
+#peter .circle:nth-child(1) {
   transform: rotate3d(1, 0, 0, 0deg);
 }
-.circle:nth-child(2) {
+#peter .circle:nth-child(2) {
   transform: rotate3d(1, 0, 0, 36deg);
 }
-.circle:nth-child(3) {
+#peter .circle:nth-child(3) {
   transform: rotate3d(1, 0, 0, 72deg);
 }
-.circle:nth-child(4) {
+#peter .circle:nth-child(4) {
   transform: rotate3d(1, 0, 0, 108deg);
 }
-.circle:nth-child(5) {
+#peter .circle:nth-child(5) {
   transform: rotate3d(1, 0, 0, 144deg);
 }
 /* Y Axis */
-.circle:nth-child(6) {
+#peter .circle:nth-child(6) {
   transform: rotate3d(0, 1, 0, 0deg);
 }
-.circle:nth-child(7) {
+#peter .circle:nth-child(7) {
   transform: rotate3d(0, 1, 0, 36deg);
 }
-.circle:nth-child(8) {
+#peter .circle:nth-child(8) {
   transform: rotate3d(0, 1, 0, 72deg);
 }
-.circle:nth-child(9) {
+#peter .circle:nth-child(9) {
   transform: rotate3d(0, 1, 0, 108deg);
 }
-.circle:nth-child(10) {
+#peter .circle:nth-child(10) {
   transform: rotate3d(0, 1, 0, 144deg);
 }
 /* Z Axis */
-.circle:nth-child(11) {
+#peter .circle:nth-child(11) {
   transform: rotate3d(0, 1, 0, 90deg) rotate3d(1, 0, 0, 0deg);
 }
-.circle:nth-child(12) {
+#peter .circle:nth-child(12) {
   transform: rotate3d(0, 1, 0, 90deg) rotate3d(1, 0, 0, 36deg);
 }
-.circle:nth-child(13) {
+#peter .circle:nth-child(13) {
   transform: rotate3d(0, 1, 0, 90deg) rotate3d(1, 0, 0, 72deg);
 }
-.circle:nth-child(14) {
+#peter .circle:nth-child(14) {
   transform: rotate3d(0, 1, 0, 90deg) rotate3d(1, 0, 0, 108deg);
 }
-.circle:nth-child(15) {
+#peter .circle:nth-child(15) {
   transform: rotate3d(0, 1, 0, 90deg) rotate3d(1, 0, 0, 144deg);
 }
 
@@ -380,7 +380,7 @@ p {
   margin-top: -20px;
 }
 
-button {
+#peter button {
   border: 1px solid white;
   background: white;
   width: 100%;
@@ -389,12 +389,12 @@ button {
   color: black;
 }
 
-button:focus {
+#peter button:focus {
   border-color: transparent !important;
   outline: none;
 }
 
-.arrowsvg {
+#peter .arrowsvg {
   width: 20px;
   border: none;
 }
@@ -413,4 +413,8 @@ button:focus {
   50% {
     transform: translate(10px, 0);
   }
+}
+
+.grid {
+  display: grid;
 }
