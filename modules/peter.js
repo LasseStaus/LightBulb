@@ -2,8 +2,6 @@ import "@babel/polyfill";
 
 //LOAD
 
-window.addEventListener("DOMContentLoaded", start);
-
 //Consts & lets global variables
 const globe = document.querySelector("#peter > div.scene");
 const myButton = document.querySelector("#peter .explore");
@@ -12,15 +10,55 @@ const text = document.querySelector(".textbox");
 const arrow = document.querySelector(".arrow");
 const introTxt = document.querySelector(".introtxt");
 const bulbWire = document.querySelector(".bulb-wire");
+const logo = document.querySelector("#peter .logo");
+const logoText1 = document.querySelector("#peter .introScreenText");
+const logoText2 = document.querySelector("#peter .introScreenText2");
 //adds fade-in animation to a href .explore
 //adds eventlistener to .explore and calls function flipOut
 export function start() {
+  console.log(logo);
+  logo.style.display = "none";
+  logoText1.style.display = "none";
+  logoText2.style.display = "none";
+
+  museumAni();
+}
+
+function museumAni() {
   globe.classList.add("phide");
   text.classList.add("phide");
   introTxt.classList.add("phide");
   myButton.style.display = "none";
   borderBottom.classList.add("phide");
-  setTimeout(introScreen, 400);
+  logo.style.display = "block";
+  logo.classList.add("animated", "zoomIn");
+  //  logo.classList.add("slower");
+  logo.addEventListener("animationend", () => {
+    logoText1.style.display = "block";
+    logoText1.classList.add("animated", "fadeIn");
+    //   logoText1.classList.add("slower");
+
+    logoText1.addEventListener("animationend", () => {
+      logoText2.style.display = "block";
+      logoText2.classList.add("animated", "fadeIn");
+      // logoText2.classList.add("slower");
+      logoText2.addEventListener("animationend", () => {
+        logoText2.classList.remove("animated", "fadeIn");
+        logoText2.classList.remove("slower");
+        logoText2.classList.add("button_pulse");
+        logoText2.addEventListener("click", aftermuseum);
+      });
+      //logoText2.classList.add("animated", "pulse");
+    });
+  });
+}
+
+function aftermuseum() {
+  document.querySelector("#peter .introScreen").classList.add("animated", "slideOutUp");
+  document.querySelector("#peter .introScreen").classList.add("slower");
+  bulbWire.classList.add("animationBulb");
+
+  setTimeout(introScreen, 100); //2000
 }
 
 function introScreen() {
@@ -29,7 +67,7 @@ function introScreen() {
   setTimeout(function() {
     introTxt.classList.add("animated", "fadeOut");
   }, 4700);
-  setTimeout(exploreButton, 1000);
+  setTimeout(exploreButton, 100); //8000
 }
 
 function exploreButton() {
@@ -48,7 +86,8 @@ function flipOut() {
   bulbWire.classList.add("phide");
 
   myButton.classList.add("animated", "flipOutX");
-  borderBottom.classList.add("animated", "flipOutX");
+  borderBottom.classList.remove("drawBorder");
+  borderBottom.classList.add("undrawBorder");
   // delay function fetchSvg
   setTimeout(globeRotate, 1200);
 }

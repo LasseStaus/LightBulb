@@ -38,7 +38,10 @@ body {
   border-left: 3px solid navajowhite;
   transform: rotate(45deg);
   transform-origin: 0 0;
-  animation: bulb-swing 5s ease-in-out 2s infinite alternate;
+}
+
+.animationBulb {
+  animation: bulb-swing 5s ease-in-out infinite alternate;
 }
 
 @keyframes bulb-swing {
