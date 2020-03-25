@@ -28,6 +28,13 @@ body {
   -webkit-animation-duration: 3s;
   animation-duration: 2s;
 }
+#peter {
+  font-family: "Montserrat", sans-serif;
+}
+
+#peter .textbox {
+  font-family: "Open Sans", sans-serif;
+}
 
 #peter .introScreenText {
   color: white;
@@ -126,7 +133,7 @@ body {
 #peter .introtxt {
   color: navajowhite;
   z-index: 9999;
-  grid-column: 2 / span 2;
+  grid-column: 1 / span 4;
   font-weight: 200;
   grid-row: 1;
   pointer-events: none;
@@ -287,7 +294,7 @@ svg {
 #peter p {
   white-space: nowrap;
   overflow: hidden;
-  font-family: "Source Code Pro", monospace;
+  /* font-family: "Source Code Pro", monospace; */
   font-size: 22px;
   color: black;
   display: flex;
