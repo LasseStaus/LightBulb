@@ -99,7 +99,6 @@ function clickContainer() {
         document.querySelector("#lasse .click_container").classList.add("animated", "fadeIn");
         document.querySelector(".fourthBack").addEventListener("click", function() {
           removeClasses();
-          //hideSVGParts();
         });
       }, 1000);
     }
@@ -199,6 +198,7 @@ function createNewBox() {
 } */
 
 function removeBoxes() {
+  document.querySelector(".outroText").style.display = "block";
   next.classList.remove("greyed_out");
   next.classList.remove("noclick");
   next.classList.add("button_pulse");
