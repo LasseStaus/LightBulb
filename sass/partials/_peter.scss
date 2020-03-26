@@ -404,7 +404,7 @@ svg {
 /** and general styling **/
 
 /* Rotate Sphere animation */
-@-webkit-keyframes animateSphere {
+@keyframes animateSphere {
   0% {
     transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
   }
