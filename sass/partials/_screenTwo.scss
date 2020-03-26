@@ -36,7 +36,17 @@ body {
   background: rgb(245, 255, 250);
   background: linear-gradient(180deg, rgba(245, 255, 250, 1) 0%, rgba(255, 248, 248, 1) 96%, rgba(238, 238, 238, 1) 100%);
 }
-
+#lisa .home,
+#lasse .home,
+#peter .home,
+#lisa .back,
+#lasse .back,
+#peter .back,
+#lisa .next,
+#lasse .next,
+#peter .next {
+  z-index: 20000;
+}
 #lisa .click_container {
   background-color: rgba(77, 77, 77, 0.745);
   position: absolute;
@@ -51,8 +61,8 @@ body {
 
 #lisa .click_container img {
   position: absolute;
-  width: 300px;
-  top: 50vh;
+  width: 22vw;
+  bottom: 30vh;
   left: 25vw;
 }
 

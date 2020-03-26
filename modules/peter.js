@@ -58,7 +58,7 @@ function aftermuseum() {
   document.querySelector("#peter .introScreen").classList.add("slower");
   bulbWire.classList.add("animationBulb");
 
-  setTimeout(introScreen, 2000); //2000
+  setTimeout(introScreen, 1000); //2000
 }
 
 function introScreen() {
@@ -67,7 +67,7 @@ function introScreen() {
   setTimeout(function() {
     introTxt.classList.add("animated", "fadeOut");
   }, 4700);
-  setTimeout(exploreButton, 8000); //8000
+  setTimeout(exploreButton, 1000); //8000
 }
 
 function exploreButton() {
@@ -441,12 +441,30 @@ function animateWindows() {
   setTimeout(() => {
     document.querySelector("#streetlight > polygon ").style.fill = "beige";
   }, 7000);
-
-  setTimeout(() => {
-    document.querySelector("#citybuildingitself > .click_container  ").classList.remove("phide");
-    document.querySelector("#citybuildingitself > .click_container  ").classList.add("animated", "fadeIn");
-    document.querySelector("#citybuildingitself > .click_container > .endTxt").classList.add("animated", "flipInX");
-  }, 7500);
+  const city = document.querySelector("#citybuildingitself");
+  if (city.classList[1] == "hide") {
+    console.log("Lasses skærm");
+  } else {
+    console.log("peters skærm");
+    setTimeout(() => {
+      lastScreen();
+    }, 7500);
+  }
 }
-
+function lastScreen() {
+  const city = document.querySelector("#citybuildingitself");
+  if (city.classList[1] == "hide") {
+    console.log("Lasses skærm");
+  } else {
+    console.log("peters skærm");
+    document.querySelector("#citybuildingitself > .click_container  ").classList.remove("phide");
+    document.querySelector("#citybuildingitself > .click_container > .endTxt").classList.add("animated", "flipInX");
+    document.querySelector("#citybuildingitself > .click_container  ").classList.add("animated", "fadeIn");
+    document.querySelector(".fourthBack").addEventListener("click", function() {
+      document.querySelector("#citybuildingitself > .click_container  ").classList.add("phide");
+      document.querySelector("#citybuildingitself > .click_container > .endTxt").classList.remove("animated", "flipInX");
+      document.querySelector("#citybuildingitself > .click_container  ").classList.remove("animated", "fadeIn");
+    });
+  }
+}
 /* fills.forEach(element => {}); */

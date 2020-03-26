@@ -43,6 +43,7 @@ function createElement(type) {
 }
 
 function hideSVGParts() {
+  console.log("hideSVGPart");
   b1 = document.querySelector("#bulb1 polygon");
   b2 = document.querySelector("#bulb2 polygon");
   b3 = document.querySelector("#bulb3 polygon");
@@ -75,16 +76,33 @@ function hideSVGParts() {
   a4.setAttribute("stroke-width", "0px");
   const element = bottom;
   element.classList.add("animated", "slideInUp");
+  clickContainer();
+}
+
+function clickContainer() {
+  bottom = document.querySelector("#bottom path");
+  const element = bottom;
   element.addEventListener("animationend", () => {
     b1.setAttribute("stroke-width", "2px");
     b1.classList.add("dash");
-    b1.addEventListener("animationend", () => {
-      document.querySelector("#shadow").style.display = "block";
-      document.querySelector("#shadow polyline").style.fill = "black";
-      document.querySelector("#shadow").classList.add("animated", "flipInX");
-      document.querySelector("#lasse .click_container").style.display = "grid";
-      document.querySelector("#lasse .click_container").classList.add("animated", "fadeIn");
-    });
+    const screenIII = document.querySelector("#lasse");
+    if (screenIII.classList.contains("beenHere")) {
+      console.log("beenhere");
+    } else if (screenIII.classList.contains("beenHere") == false) {
+      console.log("NOTbeenhere");
+      setTimeout(() => {
+        console.log("clickcontainer");
+        document.querySelector("#shadow").style.display = "block";
+        document.querySelector("#shadow polyline").style.fill = "black";
+        document.querySelector("#shadow").classList.add("animated", "flipInX");
+        document.querySelector("#lasse .click_container").style.display = "grid";
+        document.querySelector("#lasse .click_container").classList.add("animated", "fadeIn");
+        document.querySelector(".fourthBack").addEventListener("click", function() {
+          removeClasses();
+          //hideSVGParts();
+        });
+      }, 1000);
+    }
     counter = 0;
     createEventlisteners();
   });
@@ -94,8 +112,14 @@ function createEventlisteners() {
   b1.addEventListener("click", createNewBox);
 }
 
+function removeClasses() {
+  console.log("fourthBack");
+  document.querySelector(".screenIII").classList.add("beenHere");
+  document.querySelector("#lasse .click_container").style.display = "none";
+}
+
 function circleColor(arrow) {
-  console.log(arrow);
+  //  console.log(arrow);
   setTimeout((arrow.style.fill = "#FEE503"), 2000);
 }
 function animateElements(bulb, arrow, box, nybulb, containerVar) {
