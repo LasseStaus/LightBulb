@@ -13,7 +13,9 @@ window.addEventListener("DOMContentLoaded", startLisa);
 
 function startLisa() {
   const audio = document.querySelector("#music");
-  audio.play();
+  document.querySelector(".introScreenText2").addEventListener("click", function() {
+    audio.play();
+  });
   audio.volume = 0.5;
   console.log("start");
   delegationTwo();
@@ -28,6 +30,7 @@ function startLisa() {
   audio.addEventListener("ended", repeat_music);
 }
 function repeat_music() {
+  const audio = document.querySelector("#music");
   console.log("music");
   this.currentTime = 0;
   audio.play();
