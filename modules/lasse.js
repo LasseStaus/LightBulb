@@ -82,6 +82,8 @@ function hideSVGParts() {
       document.querySelector("#shadow").style.display = "block";
       document.querySelector("#shadow polyline").style.fill = "black";
       document.querySelector("#shadow").classList.add("animated", "flipInX");
+      document.querySelector("#lasse .click_container").style.display = "grid";
+      document.querySelector("#lasse .click_container").classList.add("animated", "fadeIn");
     });
     counter = 0;
     createEventlisteners();
@@ -125,6 +127,7 @@ function animateElements(bulb, arrow, box, nybulb, containerVar) {
       nybulb.addEventListener("click", createNewBox);
       counter++;
       console.log(counter);
+
       if (counter == 4) {
         setTimeout(removeBoxes, 300);
       }
@@ -132,11 +135,11 @@ function animateElements(bulb, arrow, box, nybulb, containerVar) {
   });
 }
 function createNewBox() {
+  document.querySelector("#lasse .click_container").style.display = "none";
   if (counter == 0) {
     pictureVar = data1;
     containerVar = document.querySelector(".box1 .icon-container");
     textContainerVar = document.querySelector(".box1 .tekst-container");
-
     textVar = "Back before the invention of the light bulb, you probably would've reached for a candle or an oil lamp. One of the most significant changes in everyday life, was the possibility for normal citizens to light up their house with electricity.  ";
     console.log(containerVar);
     animateElements(b1, a1, box1, b2, containerVar);
