@@ -12,6 +12,9 @@ import { targetScreen } from "./modules/screenChange";
 window.addEventListener("DOMContentLoaded", startLisa);
 
 function startLisa() {
+  const audio = document.querySelector("#music");
+  audio.play();
+  audio.volume = 0.5;
   console.log("start");
   delegationTwo();
   targetScreen();
@@ -21,6 +24,13 @@ function startLisa() {
   setTimeout(() => {
     document.querySelector(".screenI").classList.remove("fadeInL");
   }, 1000);
+
+  audio.addEventListener("ended", repeat_music);
+}
+function repeat_music() {
+  console.log("music");
+  this.currentTime = 0;
+  audio.play();
 }
 
 import "@babel/polyfill";
