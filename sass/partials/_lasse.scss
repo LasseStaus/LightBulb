@@ -76,7 +76,13 @@ svg {
   transition: 3s ease-in-out;
   z-index: 2000;
 }
-
+#lasse .outroText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2vw;
+  display: none;
+  grid-column: 1 / span 8;
+  grid-row: 13 / span 2;
+}
 #lasse .box {
   display: grid;
   grid-template-columns: auto;
