@@ -67,7 +67,7 @@ function introScreen() {
   setTimeout(function() {
     introTxt.classList.add("animated", "fadeOut");
   }, 4700);
-  setTimeout(exploreButton, 8000); //8000
+  setTimeout(exploreButton, 10000); //8000
 }
 
 function exploreButton() {
@@ -75,7 +75,11 @@ function exploreButton() {
   borderBottom.classList.remove("phide");
   borderBottom.classList.add("drawBorder");
   myButton.classList.add("animated", "fadeIn");
-  myButton.addEventListener("click", flipOut);
+  myButton.addEventListener("animationend", () => {
+    myButton.classList.remove("animated", "fadeIn");
+    myButton.classList.add("button_pulse");
+    myButton.addEventListener("click", flipOut);
+  });
 }
 
 //flipOut
@@ -85,11 +89,18 @@ function exploreButton() {
 function flipOut() {
   bulbWire.classList.add("phide");
 
+  /*  bulbWire.classList.add("animated", "zoomOutUp");
+  bulbWire.classList.add("slower");
+  bulbWire.addEventListener("animationed", () => {
+    bulbWire.classList.add("phide");
+  }); */
+
   myButton.classList.add("animated", "flipOutX");
+
   borderBottom.classList.remove("drawBorder");
   borderBottom.classList.add("undrawBorder");
   // delay function fetchSvg
-  setTimeout(globeRotate, 1200);
+  setTimeout(globeRotate, 1000);
 }
 
 function globeRotate() {
