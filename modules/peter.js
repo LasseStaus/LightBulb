@@ -70,8 +70,8 @@ function introScreen() {
   introTxt.classList.add("animated", "fadeIn");
   setTimeout(function() {
     introTxt.classList.add("animated", "fadeOut");
-  }, 470);
-  setTimeout(exploreButton, 1000); //8000
+  }, 4400);
+  setTimeout(exploreButton, 5600); //8000
 }
 
 function exploreButton() {
@@ -140,6 +140,9 @@ function goScreenTwo() {
   console.log("goScreenTwo");
   document.querySelector("#peter").style.display = "none";
   document.querySelector("#lisa").classList.remove("hide");
+  document.querySelector("#lisa .click_container").classList.remove("hide");
+  document.querySelector("#lisa").classList.add("fadeInL");
+  document.querySelector("#lisa .click_container").classList.add("fadeInL");
   document.querySelector(".thirdNext").addEventListener("click", cityBuild);
 }
 

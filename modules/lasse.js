@@ -103,6 +103,8 @@ function clickContainer() {
         });
       }, 1000);
     }
+    /*  b1.addEventListener("animationend", () => {
+    }); */
     counter = 0;
     createEventlisteners();
   });
@@ -197,10 +199,6 @@ function createNewBox() {
 } */
 
 function removeBoxes() {
-  document.querySelector("#lasse .outroText").style.display = "block";
-
-  document.querySelector("#lasse .outroText").classList.add("animated", "fadeIn");
-
   next.classList.remove("greyed_out");
   next.classList.remove("noclick");
   next.classList.add("button_pulse");

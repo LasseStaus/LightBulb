@@ -17,7 +17,6 @@ function startLisa() {
   targetScreen();
   setTimeout(() => {
     document.querySelector(".screenI").classList.remove("hide");
-    document.querySelector(".screenI").classList.add("fadeInL");
   }, 500);
   setTimeout(() => {
     document.querySelector(".screenI").classList.remove("fadeInL");

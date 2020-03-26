@@ -4,10 +4,10 @@ export function targetScreen() {
     button.addEventListener("click", function(event) {
       let parent = event.target.parentNode.classList;
       const theClass = event.target.classList[0];
-      parent.add("fadeOut");
+      parent.add("fadeOutL");
       setTimeout(() => {
         parent.add("hide");
-        parent.remove("fadeOut");
+        parent.remove("fadeOutL");
       }, 500);
       if (theClass == "next") {
         const newClass = findNextScreen();
