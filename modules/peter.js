@@ -441,6 +441,12 @@ function animateWindows() {
   setTimeout(() => {
     document.querySelector("#streetlight > polygon ").style.fill = "beige";
   }, 7000);
+
+  setTimeout(() => {
+    document.querySelector("#citybuildingitself > .click_container  ").classList.remove("phide");
+    document.querySelector("#citybuildingitself > .click_container  ").classList.add("animated", "fadeIn");
+    document.querySelector("#citybuildingitself > .click_container > .endTxt").classList.add("animated", "flipInX");
+  }, 7500);
 }
 
 /* fills.forEach(element => {}); */

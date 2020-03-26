@@ -84,12 +84,14 @@ body {
   grid-row: 15;
   grid-column: 4;
   filter: brightness(19.5);
+  z-index: 11000;
 }
 
 #citybuildingitself .home {
   grid-row: 15;
   grid-column: 4 / span 2;
   filter: brightness(19.5);
+  z-index: 11000;
 }
 #citybuildingitself .next {
   grid-column: 5;
@@ -530,4 +532,24 @@ svg {
 
 .grid {
   display: grid;
+}
+
+/*** overlay til end screen ***/
+
+#citybuildingitself .click_container {
+  background-color: rgba(77, 77, 77, 0.745);
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+}
+
+.endTxt {
+  font-size: 120px;
+  color: White;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 200;
+  text-transform: uppercase;
 }
