@@ -19,6 +19,28 @@ body {
   justify-items: center;
 }
 
+#peter .back {
+  grid-row: 6;
+  grid-column: 4;
+}
+
+#peter .home {
+  grid-column: 2 / span 2;
+  grid-row: 8;
+  margin-top: 10px;
+  max-width: 2.3vw;
+  max-height: 2.5vw;
+}
+#peter .next {
+  justify-self: left;
+  grid-column: 3;
+  margin-left: 75px;
+  grid-row: 8;
+  margin-top: 10px;
+  max-width: 2.3vw;
+  max-height: 2.5vw;
+}
+
 #peter .logo {
   height: 300px;
   grid-column: 2 / span 2;
@@ -546,16 +568,19 @@ svg {
   background-color: rgba(77, 77, 77, 0.745);
   position: absolute;
   top: 0;
+  font-family: "Montserrat", "sans-serif";
+
   width: 100vw;
   height: 100vh;
   z-index: 10000;
 }
 
 .endTxt {
-  font-size: 120px;
+  font-size: 3vw;
   color: White;
   text-align: center;
   margin: 0 auto;
+  margin-top: 30vw;
   font-weight: 200;
   text-transform: uppercase;
 }

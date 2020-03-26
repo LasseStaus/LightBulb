@@ -7,7 +7,7 @@ const globe = document.querySelector("#peter > div.scene");
 const myButton = document.querySelector("#peter .explore");
 const borderBottom = document.querySelector("#peter .underline");
 const text = document.querySelector(".textbox");
-const arrow = document.querySelector(".arrow");
+const arrow = document.querySelector("#peter .next");
 const introTxt = document.querySelector(".introtxt");
 const bulbWire = document.querySelector(".bulb-wire");
 const logo = document.querySelector("#peter .logo");
@@ -20,6 +20,10 @@ export function start() {
   logo.style.display = "none";
   logoText1.style.display = "none";
   logoText2.style.display = "none";
+
+  document.querySelector("#peter .back").style.display = "none";
+  document.querySelector("#peter .home").style.display = "none";
+  document.querySelector("#peter .next").style.display = "none";
 
   museumAni();
 }
@@ -66,8 +70,8 @@ function introScreen() {
   introTxt.classList.add("animated", "fadeIn");
   setTimeout(function() {
     introTxt.classList.add("animated", "fadeOut");
-  }, 4700);
-  setTimeout(exploreButton, 10000); //8000
+  }, 470);
+  setTimeout(exploreButton, 1000); //8000
 }
 
 function exploreButton() {
@@ -104,6 +108,9 @@ function flipOut() {
 }
 
 function globeRotate() {
+  document.querySelector("#peter .back").style.display = "block";
+  document.querySelector("#peter .home").style.display = "block";
+  document.querySelector("#peter .next").style.display = "block";
   document.querySelector("#peter .wrapper").style.display = "none";
   //document.querySelector(".centerBox").style.height = "400px";
   document.querySelector(".wrapper").classList.add("phide");
