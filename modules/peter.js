@@ -58,7 +58,7 @@ function aftermuseum() {
   document.querySelector("#peter .introScreen").classList.add("slower");
   bulbWire.classList.add("animationBulb");
 
-  setTimeout(introScreen, 1000); //2000
+  setTimeout(introScreen, 2000); //2000
 }
 
 function introScreen() {
@@ -67,7 +67,7 @@ function introScreen() {
   setTimeout(function() {
     introTxt.classList.add("animated", "fadeOut");
   }, 4700);
-  setTimeout(exploreButton, 1000); //8000
+  setTimeout(exploreButton, 8000); //8000
 }
 
 function exploreButton() {
