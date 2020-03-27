@@ -1,15 +1,12 @@
-/* import { gallery as pictures, settings } from "./modules/gallery";
-
-document.querySelector("h1").textContent = settings.author;
-
-const data = [{ i: "1.png" }, { i: "2.png" }];
-
-pictures(data, document.body); */
 "use strict";
 import { delegationTwo } from "./modules/screenTwo";
 import { targetScreen } from "./modules/screenChange";
+import { getSVG } from "./modules/lasse";
+import { start as peterStart } from "./modules/peter";
+import "@babel/polyfill";
 
 window.addEventListener("DOMContentLoaded", startLisa);
+const data = "imgs/lasse/newtestsvg.svg";
 
 function startLisa() {
   console.log("start");
@@ -20,6 +17,7 @@ function startLisa() {
   audio.volume = 0.5;
   getSVG(data, document.querySelector(".l-container"));
   delegationTwo();
+  peterStart();
   targetScreen();
   setTimeout(() => {
     document.querySelector(".screenI").classList.remove("hide");
@@ -28,34 +26,11 @@ function startLisa() {
     document.querySelector(".screenI").classList.remove("fadeInL");
   }, 1000);
 
-  audio.addEventListener("ended", repeat_music);
+  audio.addEventListener("ended", repeatMusic);
 }
-function repeat_music() {
+function repeatMusic() {
   const audio = document.querySelector("#music");
   console.log("music");
   this.currentTime = 0;
   audio.play();
 }
-
-import "@babel/polyfill";
-
-import { getSVG } from "./modules/lasse";
-import { start as peterStart } from "./modules/peter";
-peterStart();
-
-const data = "imgs/lasse/newtestsvg.svg";
-
-/* const gdata = [{ i: "desktop.svg" }];
-gallery(gdata, document.querySelector(".img")); */
-
-/* window.addEventListener("DOMContentLoaded", getSVG);
-async function getSVG() {
-  console.log("ths");
-  const response = await fetch("imgs/lasse/asset.svg");
-  const mySVG = await response.text();
-
-  console.log(mySVG);
-  document.querySelector(".l-container").innerHTML = mySVG;
-
-  createEventlisteners();
-} */

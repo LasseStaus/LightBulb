@@ -40,19 +40,15 @@ function museumAni() {
   logo.addEventListener("animationend", () => {
     logoText1.style.display = "block";
     logoText1.classList.add("animated", "fadeIn");
-    //   logoText1.classList.add("slower");
-
     logoText1.addEventListener("animationend", () => {
       logoText2.style.display = "block";
       logoText2.classList.add("animated", "fadeIn");
-      // logoText2.classList.add("slower");
       logoText2.addEventListener("animationend", () => {
         logoText2.classList.remove("animated", "fadeIn");
         logoText2.classList.remove("slower");
         logoText2.classList.add("button_pulse");
         logoText2.addEventListener("click", aftermuseum);
       });
-      //logoText2.classList.add("animated", "pulse");
     });
   });
 }
@@ -62,7 +58,7 @@ function aftermuseum() {
   document.querySelector("#peter .introScreen").classList.add("slower");
   bulbWire.classList.add("animationBulb");
 
-  setTimeout(introScreen, 2000); //2000
+  setTimeout(introScreen, 2000);
 }
 
 function introScreen() {
@@ -71,7 +67,7 @@ function introScreen() {
   setTimeout(function() {
     introTxt.classList.add("animated", "fadeOut");
   }, 4400);
-  setTimeout(exploreButton, 5600); //8000
+  setTimeout(exploreButton, 5600);
 }
 
 function exploreButton() {
@@ -92,15 +88,7 @@ function exploreButton() {
 
 function flipOut() {
   bulbWire.classList.add("phide");
-
-  /*  bulbWire.classList.add("animated", "zoomOutUp");
-  bulbWire.classList.add("slower");
-  bulbWire.addEventListener("animationed", () => {
-    bulbWire.classList.add("phide");
-  }); */
-
   myButton.classList.add("animated", "flipOutX");
-
   borderBottom.classList.remove("drawBorder");
   borderBottom.classList.add("undrawBorder");
   // delay function fetchSvg
@@ -164,195 +152,19 @@ function SvgAnimationCity() {
   citySvg.classList.add("animated", "fadeInUp");
   console.log("her er vi nu");
   citySvg.addEventListener("animationend", fillColours);
-
-  /* 
-  document.querySelector("#outlines > g > path:nth-child(1)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(2)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(3)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(4)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(5)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(6)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(7)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(8)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(9)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(10)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(11)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(12)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(13)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(14)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(15)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(16)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(17)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(18)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(19)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(20)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(21)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(22)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(23)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(24)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(25)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(26)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(27)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(28)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(29)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(30)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(31)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(32)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(33)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(34)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(35)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(36)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(37)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(38)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(39)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(40)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(41)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(42)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(43)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(44)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(46)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(47)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(48)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(49)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(50)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(51)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(52)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(53)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(266)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(254)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(267)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(357)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(247)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(255)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(361)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(259)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(258)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(260)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(256)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(273)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(246)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(257)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(362)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(328)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(261)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(275)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(62)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(262)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(316)").style.fill = "white";
-  document.querySelector("#outlines > g > path:nth-child(323)").style.fill = "white";
-
-  setTimeout(fillColours, 2000); */
 }
 
 function fillColours() {
   document.querySelector("#outlines").setAttribute("stroke-dasharray", "0px");
   document.querySelector("#peterFills").classList.remove("phide");
-
   document.querySelector("#moon > circle ").style.fill = "beige";
-
-  /*   document.querySelector("#outlines > g > path:nth-child(1)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(2)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(3)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(4)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(5)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(6)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(7)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(8)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(9)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(10)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(11)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(12)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(13)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(14)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(15)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(16)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(17)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(18)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(19)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(20)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(21)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(22)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(23)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(24)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(25)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(26)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(27)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(28)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(29)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(30)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(31)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(32)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(33)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(34)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(35)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(36)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(37)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(38)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(39)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(40)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(41)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(42)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(43)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(44)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(46)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(47)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(48)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(49)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(50)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(51)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(52)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(53)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(266)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(254)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(267)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(357)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(247)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(255)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(361)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(259)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(258)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(260)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(256)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(273)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(246)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(257)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(362)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(328)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(261)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(275)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(62)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(262)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(316)").style.fill = "";
-  document.querySelector("#outlines > g > path:nth-child(323)").style.fill = ""; */
-
   document.querySelectorAll(".cls-7").forEach(e => {
     e.classList.remove("cls-7");
   });
-
-  //document.querySelector("#outlines").classList.add("animated", "fadeIn");
   document.querySelector("#outlines").style.stroke = "none";
   document.querySelector("#outlines").style.strokeWidth = "0";
-
   document.querySelector("#peterFills").classList.add("animated", "fadeIn");
   document.querySelector("#peterFills").addEventListener("animationend", animateWindows);
-
-  /*   document.querySelector("#outlines > g > path:nth-child(266)").style.fill = "beige";
-   */
-  /*  document.querySelectorAll("#window32 > polyline, #window31 > polyline , #window30 > polyline ").forEach(windows => {
-    console.log("function starts ");
-    for (let i = 0; i < 9; i++) {
-      console.log("for loop");
-      setTimeout(() => {
-        console.log("settimeout");
-        windows.style.fill = " red";
-      }, 1000);
-    }
-  }); */
-  /*   document.querySelectorAll("g").forEach(gruppe => {
-    let g = gruppe.childNodes;
-    console.log(g);
-
-  }); */
 }
 
 function animateWindows() {
