@@ -12,12 +12,13 @@ import { targetScreen } from "./modules/screenChange";
 window.addEventListener("DOMContentLoaded", startLisa);
 
 function startLisa() {
+  console.log("start");
   const audio = document.querySelector("#music");
   document.querySelector(".introScreenText2").addEventListener("click", function() {
     audio.play();
   });
   audio.volume = 0.5;
-  console.log("start");
+  getSVG(data, document.querySelector(".l-container"));
   delegationTwo();
   targetScreen();
   setTimeout(() => {
@@ -43,8 +44,6 @@ import { start as peterStart } from "./modules/peter";
 peterStart();
 
 const data = "imgs/lasse/newtestsvg.svg";
-
-getSVG(data, document.querySelector(".l-container"));
 
 /* const gdata = [{ i: "desktop.svg" }];
 gallery(gdata, document.querySelector(".img")); */
