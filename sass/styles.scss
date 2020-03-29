@@ -9,19 +9,19 @@
 @use 'partials/screenTwo';
 @use 'partials/icon_animation_lisa';
 
-/* body {
-  background: vars.$bg-color;
+@font-face {
+  font-family: "Open Sans";
+  src: url("/static/fonts/opensans-regular-webfont.woff2") format("woff2"), url("/static/fonts/opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  height: 100vh;
-  width: 100vw;
-  margin: 0 auto;
-  h1 {
-    @include mixins.flexible();
-    &:hover {
-      color: blue;
-    }
-  }
-} */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/static/fonts/montserrat-regular-webfont.woff2") format("woff2"), url("/static/fonts/montserrat-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .img {
   @include mixins.defaultBorder(5px);

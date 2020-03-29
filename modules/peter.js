@@ -113,14 +113,16 @@ function globeRotate() {
 function textAppear() {
   text.classList.remove("phide");
   text.classList.add("fade-in");
-  arrow.addEventListener("click", fadeOutAll);
+  arrow.addEventListener("click", function() {
+    text.classList.remove("fade-in");
+    fadeOutAll();
+  });
 }
 
 function fadeOutAll() {
   console.log("fadeOutAll");
-  globe.classList.add("animated", "fadeOutUp");
   text.classList.add("animated", "flipOutY");
-  arrow.classList.add("animated", "lightSpeedOut");
+  globe.classList.add("animated", "fadeOutUp");
   setTimeout(goScreenTwo, 1200);
 }
 
